@@ -53,7 +53,8 @@ alias dco='docker-compose'
 alias grep='grep -a'
 alias src='source ~/.zshrc'
 alias stp='st ~/root/projects'
-alias stow_dotfiles='stow --dir=~/root/projects --target=~ dotfiles'
+alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
+alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias trello=nutrella
 
 # Git
