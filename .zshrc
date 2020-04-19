@@ -17,7 +17,7 @@ setopt pushdsilent
 # Exports
 export BASH_ENV="~/.bashrc"
 export EDITOR='subl -w'
-export PATH=.:./bin:~/.bin:$PATH
+export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
 export PATH="/usr/local/sbin:$PATH" # Homebrew
 
 # Disable when running PackManager translation scripts
