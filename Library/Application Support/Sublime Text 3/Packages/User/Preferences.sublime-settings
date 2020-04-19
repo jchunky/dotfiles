@@ -1,0 +1,70 @@
+{
+	"bold_folder_labels": true,
+	"caret_style": "phase",
+	"default_line_ending": "unix",
+	"detect_indentation": false,
+	"draw_indent_guides": false,
+	"draw_white_space": "none",
+	"ensure_newline_at_eof_on_save": false,
+	"fade_fold_buttons": false,
+	"file_exclude_patterns":
+	[
+		"*-built.js*",
+		"*.o",
+		".DS_Store",
+		"yarn.lock"
+	],
+	"fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		"*.app",
+		"*.log",
+		".bundle",
+		".git",
+		".hg",
+		".idea",
+		".svn",
+		".tmp",
+		".zeus.sock",
+		"__MACOSX",
+		"bower_components",
+		"CVS",
+		"dummy",
+		"gettext",
+		"log",
+		"node_modules",
+		"public",
+		"staged",
+		"stories",
+		"test-results",
+		"tmp",
+		"translation_pkgs",
+		"translations",
+		"vendor"
+	],
+	"font_face": "JetBrains Mono NL",
+	"font_size": 11,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignore_vcs_packages": true,
+	"ignored_packages":
+	[
+		"Theme - Soda",
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"remember_open_files": false,
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"show_full_path": true,
+	"tab_size": 2,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}

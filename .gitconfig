@@ -1,0 +1,45 @@
+[include]
+  path = ~/.gitconfig.local
+[alias]
+  # br = branch
+  # ci = commit
+  # co = checkout
+  # st = status
+  # su = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  # undo = reset --soft HEAD^
+  # l = log --date=short --graph --pretty='%Cred%h%Creset - %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %Cblue[%an]%Creset'
+  # set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
+  # integrate = !sh -c 'git push $1 $2:ready-to-merge/into-master/${2}' -
+[core]
+  # Use custom `.gitignore` and `.gitattributes`
+	excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+  commentchar = $
+  hooksPath = ~/.git-templates/hooks
+
+  # Ignore Windows ^M line endings when 'git diff'
+  pager = tr -d '\\r' | less -REX
+[color]
+  # Use colors in Git commands that are capable of colored output when outputting to the terminal
+  ui = true
+  branch = auto
+  diff = auto
+[push]
+  #default = simple
+  default = current
+[user]
+	name = Chunky
+[remote "origin"]
+  push = HEAD
+[branch]
+  autosetupmerge = true
+[remote]
+  pushdefault = origin
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = ~/.stCommitMsg

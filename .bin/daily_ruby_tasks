@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Solve bootsnap issues
+pushd ~/src/packmanager/master && bundle exec rails tmp:clear && popd
+pushd ~/src/production-scheduling/backend && bundle exec rails tmp:clear && popd
+
+# Mark directorise as test sources
+pushd ~/src/packmanager/master && bundle exec ruby ./development/rubymine/mark_directories.rb && popd

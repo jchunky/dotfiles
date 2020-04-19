@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd frontend
+yarn install
+cd backend
+bundle
+cd ..

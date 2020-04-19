@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for i in $(find . -type d | grep  -v "\/\.");
+do
+  /bin/zsh -c "(cd "$i" && "$@")"
+done

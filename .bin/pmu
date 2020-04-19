@@ -1,0 +1,44 @@
+#!/bin/bash
+
+set -e
+
+PURPLE='\033[0;35m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo_header() {
+  echo -e "${PURPLE}$1${NC}"
+}
+
+echo_success() {
+  echo -e "${GREEN}$1${NC}"
+}
+
+echo_header 'Updating gems'
+bundle
+
+echo_header 'Updating PackMan'
+bundle exec rails packman:update
+
+echo_header 'Updating MRP server-side'
+pushd 'components/mrp'
+bundle
+bundle exec rake db:migrate
+bundle exec rake app:db:test:prepare
+popd
+
+echo_header 'Updating MRP client-side'
+pushd 'client_webpack/mrp'
+nvm use
+yarn install
+npm run build
+popd
+
+echo_header 'Updating Scheduling'
+pushd 'components/scheduling'
+bundle
+bundle exec rake db:migrate
+bundle exec rake app:db:test:prepare
+popd
+
+echo_header 'Done'

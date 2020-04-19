@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp ~/.bin/.seed_js/* .
+cp ~/.bin/.seed_js/.e* .
+yarn install
