@@ -42,7 +42,6 @@
 		"translations",
 		"vendor"
 	],
-	"font_face": "JetBrains Mono NL",
 	"font_size": 11,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
