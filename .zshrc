@@ -49,6 +49,7 @@ alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && po
 alias cheat='cat ~/root/projects/private/docs/cheat.txt'
 alias cop='rubocop -a'
 alias daily='update_all; daily_ruby_tasks'
+alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
 alias grep='grep -a'
 alias src='source ~/.zshrc'
