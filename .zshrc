@@ -46,7 +46,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias a='alias | grep -i'
 alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
 alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && popd'
-alias cheat='cat ~/root/projects/docs/cheat.txt'
+alias cheat='cat ~/root/projects/private/docs/cheat.txt'
 alias cop='rubocop -a'
 alias daily='update_all; daily_ruby_tasks'
 alias dco='docker-compose'
