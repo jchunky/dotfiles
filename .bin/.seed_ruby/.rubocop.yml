@@ -76,8 +76,6 @@ Naming/MethodParameterName:
   Enabled: false
 Style/Documentation:
   Enabled: false
-Style/FormatString:
-  Enabled: false
 Style/FormatStringToken:
   Enabled: false
 Style/FrozenStringLiteralComment:

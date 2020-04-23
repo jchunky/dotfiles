@@ -4,7 +4,7 @@ tap "homebrew/core"
 brew "automake"
 brew "bison"
 brew "curl"
-brew "gettext", link: true
+brew "gettext"
 brew "git"
 brew "branj"
 brew "chruby"
