@@ -82,6 +82,8 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 Style/MutableConstant:
   Enabled: false
+Style/NumericPredicate:
+  Enabled: false
 Style/RescueModifier:
   Enabled: false
 Style/RescueStandardError:
