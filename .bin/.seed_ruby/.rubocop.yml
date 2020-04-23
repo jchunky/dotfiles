@@ -21,6 +21,8 @@ Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
 Style/CollectionMethods:
   Enabled: true
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
 
 # Auto-correct
 Layout/DefEndAlignment:
@@ -74,17 +76,9 @@ Naming/MethodParameterName:
   Enabled: false
 Style/Documentation:
   Enabled: false
-Style/EmptyCaseCondition:
-  Enabled: false
-Style/FormatString:
-  Enabled: false
 Style/FormatStringToken:
   Enabled: false
 Style/FrozenStringLiteralComment:
-  Enabled: false
-Style/ModuleFunction:
-  Enabled: false
-Style/MultilineBlockChain:
   Enabled: false
 Style/MutableConstant:
   Enabled: false
@@ -93,8 +87,6 @@ Style/NumericPredicate:
 Style/RescueModifier:
   Enabled: false
 Style/RescueStandardError:
-  Enabled: false
-Style/StructInheritance:
   Enabled: false
 
 # Class structure
