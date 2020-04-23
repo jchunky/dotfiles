@@ -90,9 +90,7 @@ Layout/ClassStructure:
   Enabled: true
   AutoCorrect: true
   ExpectedOrder:
-    - extend
-    - include
-    - prepend
+    - module_inclusion
     - constants
     - attr_accessor
     - attr_reader
