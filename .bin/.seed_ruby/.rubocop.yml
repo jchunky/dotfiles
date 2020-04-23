@@ -1,8 +1,35 @@
-# Layout
+# New cops
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+
+# Miscelleneous
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
+Style/CollectionMethods:
+  Enabled: true
+
+# Auto-correct
+Layout/DefEndAlignment:
+  AutoCorrect: true
+Layout/EndAlignment:
+  AutoCorrect: true
+Layout/LineLength:
+  Enabled: true
+  AutoCorrect: true
 
 # Indentation
 Layout/BlockAlignment:
@@ -20,16 +47,7 @@ Layout/MultilineMethodCallIndentation:
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
-# Auto-correct
-Layout/DefEndAlignment:
-  AutoCorrect: true
-Layout/EndAlignment:
-  AutoCorrect: true
-Layout/LineLength:
-  Enabled: true
-  AutoCorrect: true
-
-# Add line breaks when auto-correcting
+# Line breaks
 Layout/FirstArrayElementLineBreak:
   Enabled: true
 Layout/FirstHashElementLineBreak:
@@ -43,25 +61,13 @@ Layout/MultilineHashKeyLineBreaks:
 Layout/MultilineMethodArgumentLineBreaks:
   Enabled: true
 
-# Style
-Style/CollectionMethods:
-  Enabled: true
-
-# New cops
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
-Lint/RaiseException:
-  Enabled: true
-Lint/StructNewOverride:
-  Enabled: true
-Style/ExponentialNotation:
-  Enabled: true
-Style/HashEachMethods:
-  Enabled: true
-Style/HashTransformKeys:
-  Enabled: true
-Style/HashTransformValues:
-  Enabled: true
+# Trailing commas
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
 
 # Disable annoyances
 Metrics:
