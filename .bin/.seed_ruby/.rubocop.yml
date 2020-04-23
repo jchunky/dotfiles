@@ -98,8 +98,10 @@ Layout/ClassStructure:
     - attr_reader
     - attr_writer
     - delegate
-    - class_methods
+    - public_class_methods
     - initializer
     - public_methods
+    - protected_class_methods
     - protected_methods
+    - private_class_methods
     - private_methods
