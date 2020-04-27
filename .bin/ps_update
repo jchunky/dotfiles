@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd frontend
+yarn install
+cd backend
+bundle
+bundle exec rake db:schema:load
+bundle exec rake dev:reset_seed
+cd ..
