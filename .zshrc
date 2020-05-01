@@ -85,7 +85,7 @@ function update_all {
   pushd ~/src/production-scheduling && git fetch -p && delete_stale_branches && popd
   pushd ~/src/packmanager/master && git fetch -p && delete_stale_branches && popd
 
-  pushd ~/root/projects/private && gaa && gcmsg "auto-update" && gp && popd
+  pushd ~/root/projects/private && gaa && gcmsg "auto-update"; gp && popd
 }
 function update_gems {
   gem update --system
