@@ -1,5 +1,4 @@
 {
-  "plugins": ["prettier"],
   "root": true,
   "parser": "babel-eslint",
   "parserOptions": {
@@ -11,16 +10,18 @@
     "node": true,
     "jest": true
   },
-  "extends": [
-    "plugin:you-dont-need-lodash-underscore/compatible",
-    "prettier"
-  ],
   "rules": {
+    "class-methods-use-this": "off",
     "import/no-default-export": "off",
     "import/prefer-default-export": "off",
     "no-shadow": "off",
     "no-unused-vars": "off",
     "no-use-before-define": "off",
     "prettier/prettier": "error"
-  }
+  },
+  "plugins": ["prettier"],
+  "extends": [
+    "plugin:you-dont-need-lodash-underscore/compatible",
+    "prettier"
+  ]
 }
