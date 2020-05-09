@@ -1,5 +1,5 @@
 {
-  "plugins": ["babel", "jest", "prettier"],
+  "plugins": ["prettier"],
   "root": true,
   "parser": "babel-eslint",
   "parserOptions": {
