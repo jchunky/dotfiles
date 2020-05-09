@@ -11,7 +11,10 @@
     "node": true,
     "jest": true
   },
-  "extends": ["prettier"],
+  "extends": [
+    "plugin:you-dont-need-lodash-underscore/compatible",
+    "prettier"
+  ],
   "rules": {
     "import/no-default-export": "off",
     "import/prefer-default-export": "off",
