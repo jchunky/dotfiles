@@ -12,8 +12,8 @@
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "jest": "^26.0.1",
     "prettier": "^2.0.5"
   },
@@ -27,6 +27,5 @@
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint --fix .",
     "lint-test": "eslint --fix . && jest --no-cache ./*"
-  },
-  "license": "MIT"
+  }
 }

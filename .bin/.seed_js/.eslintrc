@@ -19,9 +19,12 @@
     "no-use-before-define": "off",
     "prettier/prettier": "error"
   },
-  "plugins": ["prettier"],
+  "plugins": [
+    "lodash-fp",
+    "prettier"
+  ],
   "extends": [
-    "plugin:you-dont-need-lodash-underscore/compatible",
+    "plugin:lodash-fp/recommended",
     "prettier"
   ]
 }
