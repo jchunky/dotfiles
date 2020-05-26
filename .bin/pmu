@@ -27,12 +27,12 @@ bundle exec rake db:migrate
 bundle exec rake app:db:test:prepare
 popd
 
-echo_header 'Updating MRP client-side'
-pushd 'client_webpack/mrp'
-nvm use
-yarn install
-npm run build
-popd
+# echo_header 'Updating MRP client-side'
+# pushd 'client_webpack/mrp'
+# nvm use
+# yarn install
+# npm run build
+# popd
 
 echo_header 'Updating Scheduling'
 pushd 'components/scheduling'
