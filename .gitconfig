@@ -43,3 +43,5 @@
 	trustExitCode = true
 [commit]
 	template = ~/.stCommitMsg
+[pull]
+	rebase = true
