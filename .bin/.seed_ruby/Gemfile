@@ -5,7 +5,6 @@ gem "guard"
 gem "minitest"
 gem "rake"
 gem "rspec"
-gem "rubocop"
 gem "test-unit"
 gem "whats_up"
 
