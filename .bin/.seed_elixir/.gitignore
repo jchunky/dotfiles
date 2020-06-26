@@ -1,0 +1,5 @@
+*.log
+.DS_Store
+.guard_history
+.idea
+node_modules

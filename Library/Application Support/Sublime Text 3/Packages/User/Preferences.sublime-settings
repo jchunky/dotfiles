@@ -20,7 +20,7 @@
 		"*.app",
 		"*.log",
 		".bundle",
-    ".exercism",
+		".exercism",
 		".git",
 		".hg",
 		".idea",
