@@ -77,7 +77,7 @@ function update_all {
   brew update
   brew upgrade
   brew cleanup
-  brew cask upgrade
+  brew upgrade --cask
 
   pushd $ZSH_CUSTOM/plugins/you-should-use && git pull && popd
   pushd ~/.oh-my-zsh-custom && git pull && popd
