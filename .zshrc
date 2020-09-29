@@ -5,7 +5,7 @@ plugins=(you-should-use $plugins)
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 DISABLE_UPDATE_PROMPT=true
-plugins=(bundler chruby git history nulogy ruby sublime timer $plugins)
+plugins=(bundler chruby git gitfast history nulogy ruby sublime timer $plugins)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 setopt hist_find_no_dups
