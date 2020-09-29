@@ -74,7 +74,8 @@ function mkpr {
   hub pull-request -m "${BRANCH_NAME}"
 }
 function update_all {
-  cd ~
+  tldr --update
+
   brewdump
   brew update
   brew upgrade
