@@ -26,6 +26,7 @@ brew "postgresql"
 brew "ruby-install"
 brew "ssh-copy-id", link: true
 brew "stow"
+brew "telnet"
 brew "the_silver_searcher"
 brew "tldr"
 brew "tree"
