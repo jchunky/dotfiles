@@ -35,6 +35,9 @@ export PATH=/usr/local/opt/gettext/bin:$PATH
 # PackManager (foreman sometimes fails to start)
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+# PackManager (silence thor deprecation warnings when runninng rake tasks)
+export THOR_SILENCE_DEPRECATION=true
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
