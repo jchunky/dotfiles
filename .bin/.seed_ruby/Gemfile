@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 # production
 gem "activesupport"
+gem "require_all"
 
 # development
 gem "guard"
