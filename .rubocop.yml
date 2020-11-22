@@ -76,6 +76,8 @@ Style/NumericPredicate:
   Enabled: false
 Style/ParallelAssignment:
   Enabled: false
+Style/StructInheritance:
+  Enabled: false
 
 # Class structure
 Layout/ClassStructure:
