@@ -65,6 +65,8 @@ Metrics:
   Enabled: false
 Naming/MethodParameterName:
   Enabled: false
+Rails/Output:
+  Enabled: false
 Style/Documentation:
   Enabled: false
 Style/EmptyMethod:
