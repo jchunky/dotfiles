@@ -2,12 +2,11 @@ source "https://rubygems.org"
 
 # production
 gem "activesupport"
-gem "require_all"
 
 # development
 gem "guard"
 gem "rake"
-gem "rubocop"
+gem "rubocop-rails"
 gem "whats_up"
 
 # test
