@@ -1,5 +1,8 @@
-require:
-  - rubocop-rails
+# Enable rails cops
+# require:
+#   - rubocop-rails
+# Rails/Output:
+#   Enabled: false
 
 # New cops
 AllCops:
@@ -64,8 +67,6 @@ Style/TrailingCommaInHashLiteral:
 Metrics:
   Enabled: false
 Naming/MethodParameterName:
-  Enabled: false
-Rails/Output:
   Enabled: false
 Style/Documentation:
   Enabled: false
