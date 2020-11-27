@@ -1,8 +1,9 @@
-# Rails cops
-# require:
-#   - rubocop-rails
-# Rails/Output:
-#   Enabled: false
+require:
+  - rubocop-rails
+
+# Disable rails cops
+Rails:
+  Enabled: false
 
 # New cops
 AllCops:
@@ -22,9 +23,6 @@ Style/StringLiterals:
 Layout/DefEndAlignment:
   AutoCorrect: true
 Layout/EndAlignment:
-  AutoCorrect: true
-Layout/LineLength:
-  Enabled: true
   AutoCorrect: true
 
 # Indentation
@@ -64,9 +62,13 @@ Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
 # Disable annoyances
+Layout/LineLength:
+  Enabled: false
 Metrics:
   Enabled: false
 Naming/MethodParameterName:
+  Enabled: false
+Rails/Output:
   Enabled: false
 Style/Documentation:
   Enabled: false
