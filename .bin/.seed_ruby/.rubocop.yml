@@ -1,4 +1,4 @@
-# Enable rails cops
+# Rails cops
 # require:
 #   - rubocop-rails
 # Rails/Output:
