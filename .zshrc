@@ -1,6 +1,3 @@
-# zsh-you-should-use
-plugins=(you-should-use $plugins)
-
 # zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
@@ -45,6 +42,9 @@ export NVM_DIR="$HOME/.nvm"
 # zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# zsh-you-should-use
+source /usr/local/share/zsh-you-should-use/you-should-use.plugin.zsh
+
 # Aliases
 alias a='alias | grep -i'
 alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
@@ -85,7 +85,6 @@ function update_all {
   brew cleanup
   brew upgrade --cask
 
-  pushd $ZSH_CUSTOM/plugins/you-should-use && git pull && popd
   pushd ~/.oh-my-zsh-custom && git pull && popd
   pushd ~/root/third_party/dev-toolbox && git pull && popd
 
