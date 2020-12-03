@@ -1,6 +1,7 @@
 # New cops
 AllCops:
   NewCops: enable
+  SuggestExtensions: false
 
 # Miscelleneous
 Layout/ExtraSpacing:
