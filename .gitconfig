@@ -12,7 +12,7 @@
   # integrate = !sh -c 'git push $1 $2:ready-to-merge/into-master/${2}' -
 [core]
   # Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/jasoncnulogy.com/.gitignore
   attributesfile = ~/.gitattributes
   commentchar = $
   hooksPath = ~/.git-templates/hooks
