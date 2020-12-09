@@ -56,6 +56,7 @@ alias cop='rubocop -a'
 alias daily='update_all; daily_ruby_tasks'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
+alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
 alias src='source ~/.zshrc'
