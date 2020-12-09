@@ -81,10 +81,10 @@ function update_all {
   tldr --update
 
   brewdump
-  brew update
-  brew upgrade
-  brew cleanup
-  brew upgrade --cask
+  brew update -q
+  brew upgrade -q
+  brew cleanup -q
+  brew upgrade -q --cask
 
   pushd ~/.oh-my-zsh-custom && git pull && popd
   pushd ~/root/third_party/dev-toolbox && git pull && popd
