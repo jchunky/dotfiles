@@ -15,16 +15,15 @@ setopt pushdsilent
 export BASH_ENV="~/.bashrc"
 export EDITOR='subl -w'
 export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
-export PATH="/usr/local/sbin:$PATH" # Homebrew
 
 # Disable when running PackManager translation scripts
-export CDPATH=~/root:~/root/bands:~/root/projects/exercism/ruby:~/root/projects/katas:~/root/projects:~/src/production-scheduling:~/src/packmanager:~/src
+export CDPATH=~/root:~/root/projects/exercism/ruby:~/root/projects/katas:~/root/projects/katas/_archive:~/root/projects/katas/_javascript:~/root/projects:~/src/production-scheduling:~/src/packmanager:~/src
 
 # Disable spring preloader
 export DISABLE_SPRING=true
 
 # homebrew
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # gettext (PackManager translations)
 export PATH=/usr/local/opt/gettext/bin:$PATH
