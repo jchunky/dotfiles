@@ -5,26 +5,25 @@
     "ecmaVersion": 7,
     "sourceType": "module"
   },
+  "globals": {
+    "BigInt": true
+  },
   "env": {
     "es6": true,
     "node": true,
     "jest": true
   },
-  "rules": {
-    "class-methods-use-this": "off",
-    "import/no-default-export": "off",
-    "import/prefer-default-export": "off",
-    "no-shadow": "off",
-    "no-unused-vars": "off",
-    "no-use-before-define": "off",
-    "prettier/prettier": "error"
-  },
-  "plugins": [
-    "lodash-fp",
-    "prettier"
-  ],
   "extends": [
-    "plugin:lodash-fp/recommended",
-    "prettier"
-  ]
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "rules": {
+    "linebreak-style": "off",
+
+    "import/extensions": "off",
+    "import/no-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/prefer-default-export": "off"
+  }
 }

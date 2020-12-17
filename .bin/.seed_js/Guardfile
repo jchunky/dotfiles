@@ -21,6 +21,8 @@ watch(/.*\.js$/) do |match|
   print_line("=")
   path = match[0]
   puts "Processing file: #{path}..."
+  system "source ~/.bashrc; yarn pretty #{path}"
+  print_line("-")
   system "source ~/.bashrc; yarn eslint --fix #{path}"
   print_line("-")
   system "source ~/.bashrc; yarn test"
