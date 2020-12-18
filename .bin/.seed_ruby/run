@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bundle exe rubocop -A $1 ; bundle exec ruby *_test.rb
+find . -name '*.rb' | entr -c -p -s 'bundle exe rubocop -A $0 ; bundle exec ruby *_test.rb'
