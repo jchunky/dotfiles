@@ -1,3 +1,5 @@
 #!/bin/bash
 
-find . -name '*.rb' | entr -c -p -s 'bundle exe rubocop -A $0 ; bundle exec ruby *_test.rb'
+while true; do
+  find . -name '*.rb' | entr -c -d -p -s 'bundle exe rubocop -A $0 ; bundle exec ruby *_test.rb'
+done

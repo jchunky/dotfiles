@@ -1,3 +1,5 @@
 #!/bin/bash
 
-find . -name '*.js' | entr -c -p -s 'source ~/.bashrc ; yarn prettier --write $0 ; yarn test'
+while true; do
+  find . -name '*.js' | entr -c -d -p -s 'source ~/.bashrc ; yarn prettier --write $0 ; yarn test'
+done
