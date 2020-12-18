@@ -1,0 +1,3 @@
+#!/bin/bash
+
+source ~/.bashrc ; yarn prettier --write $1 ; yarn test
