@@ -73,6 +73,8 @@ Style/FormatStringToken:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+Style/ModuleFunction:
+  Enabled: false
 Style/MutableConstant:
   Enabled: false
 Style/NumericPredicate:
