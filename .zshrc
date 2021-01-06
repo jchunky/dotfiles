@@ -59,7 +59,7 @@ alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
 alias src='source ~/.zshrc'
-alias stp='st ~/root/projects'
+alias stp='mine ~/root/projects'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias trello=nutrella
