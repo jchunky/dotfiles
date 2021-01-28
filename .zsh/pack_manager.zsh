@@ -1,6 +1,11 @@
 # Replace nulogy zsh plugin alias with my custom script
 unalias pmu
 
+export QUEUE=*
+export NGINX_PORT=3000
+export UNICORN_PORT=5555
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 alias bg1='be rake resque:scheduler'
 alias bg2='QUEUE=* bundle exec rake resque:work'
 alias fr='killall; foreman start'
