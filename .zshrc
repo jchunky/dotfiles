@@ -73,6 +73,7 @@ alias gdw='git diff -b --word-diff'
 
 # Functions
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
+function merge_files { awk 'FNR==1{print ""}1' $@ }
 function mkpr {
   BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD);
   hub pull-request -m "${BRANCH_NAME}"
