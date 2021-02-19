@@ -1,3 +1,5 @@
+export MESSAGE_BUS_CONSUMER_GROUP_ID=chunky
+
 function ps_update {
   cd ~/src/production-scheduling/frontend
   yarn install
