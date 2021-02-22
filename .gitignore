@@ -2,3 +2,6 @@
 .DS_Store
 .idea
 node_modules
+Library/Application Support/Sublime Text 3/Cache/
+Library/Application Support/Sublime Text 3/Index/
+Library/Application Support/Sublime Text 3/Local/
