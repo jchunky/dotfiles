@@ -1,5 +1,5 @@
 # Replace nulogy zsh plugin alias with my custom script
-unalias pmu
+#unalias pmu
 
 export QUEUE=*
 export NGINX_PORT=3000
