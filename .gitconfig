@@ -12,7 +12,7 @@
   # integrate = !sh -c 'git push $1 $2:ready-to-merge/into-master/${2}' -
 [core]
   # Use custom `.gitignore` and `.gitattributes`
-	excludesfile = /Users/jasoncnulogy.com/.gitignore
+  excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
   commentchar = $
   hooksPath = ~/.git-templates/hooks
@@ -28,7 +28,7 @@
   #default = simple
   default = current
 [user]
-	name = Chunky
+  name = Chunky
 [remote "origin"]
   push = HEAD
 [branch]
@@ -36,19 +36,19 @@
 [remote]
   pushdefault = origin
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [commit]
-	template = ~/.stCommitMsg
+  template = ~/.stCommitMsg
 [pull]
-	rebase = true
+  rebase = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
