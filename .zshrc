@@ -87,8 +87,8 @@ function update_all {
   brew cleanup -q
   brew upgrade -q --cask
 
-  pushd ~/.oh-my-zsh-custom && git pull && popd
   pushd ~/root/third_party/dev-toolbox && git pull && popd
+  pushd ~/root/third_party/oh-my-zsh-plugins && git pull && popd
 
   pushd ~/src/production-scheduling && git fetch -p && delete_stale_branches && popd
   pushd ~/src/packmanager && git fetch -p && delete_stale_branches && popd
