@@ -29,6 +29,7 @@
 		".zeus.sock",
 		"__MACOSX",
 		"bower_components",
+    "build",
 		"CVS",
 		"dummy",
 		"gettext",
