@@ -13,4 +13,3 @@ pushd() {
 popd() {
   command popd "$@" > /dev/null
 }
-

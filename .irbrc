@@ -42,4 +42,3 @@ load do
   H = { bob: 'Bob', mom: 'Mom', gods: 'Gos', chris: 'Chris' }
   A = H.keys
 end
-
