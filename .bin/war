@@ -2,11 +2,9 @@
 
 trap "echo Exited!; exit;" SIGINT SIGTERM
 
-watch_pattern="(app|spec).*$1.*\.rb$"
-
+watch_pattern="(app|lib|spec)/.*$1.*\.rb$"
 echo $watch_pattern
 
 while true; do
-  ag -g "${watch_pattern}"
-  ag -g "${watch_pattern}" | entr -c -d -p -s "bundle exec rspec $2"
+  ag -g "${watch_pattern}" | entr -c -d -p -s "bundle exec spring rspec $2"
 done
