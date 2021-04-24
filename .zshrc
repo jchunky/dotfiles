@@ -20,7 +20,7 @@ export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
 export CDPATH=~/root:~/root/projects/exercism/ruby:~/root/projects/katas:~/root/projects/katas/_archive:~/root/projects/katas/_javascript:~/root/projects:~/src/production-scheduling:~/src/packmanager:~/src
 
 # Disable spring preloader
-export DISABLE_SPRING=true
+#export DISABLE_SPRING=true
 
 # homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
