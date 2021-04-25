@@ -1,6 +1,8 @@
 export ESLINT_NO_DEV_ERRORS=true
 export MESSAGE_BUS_CONSUMER_GROUP_ID=chunky
 
+alias ps_test='rake test:rspec'
+
 function ps_update {
   cd ~/src/production-scheduling/frontend
   yarn install
