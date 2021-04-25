@@ -17,7 +17,16 @@ export EDITOR='subl -w'
 export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
 
 # cdpath
-export CDPATH=~/root:~/root/projects/exercism/ruby:~/root/projects/katas:~/root/projects/katas/_archive:~/root/projects/katas/_javascript:~/root/projects:~/src/production-scheduling:~/src/packmanager:~/src
+export CDPATH=~/root/projects/dotfiles/.bin:$CDPATH
+export CDPATH=~/root/projects/exercism/ruby:$CDPATH
+export CDPATH=~/root/projects/katas/_archive:$CDPATH
+export CDPATH=~/root/projects/katas/_javascript:$CDPATH
+export CDPATH=~/root/projects/katas/_others:$CDPATH
+export CDPATH=~/root/projects/katas:$CDPATH
+export CDPATH=~/root/projects:$CDPATH
+export CDPATH=~/root:$CDPATH
+export CDPATH=~/src/production-scheduling:$CDPATH
+export CDPATH=~/src:$CDPATH
 
 # homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -48,9 +57,10 @@ alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
 alias kill_jamf='sudo watch -n 0.1 pkill -9 -i jamf'
+alias minep='mine ~/root/projects'
 alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run -o ./run; chmod a+x ./run'
 alias src='source ~/.zshrc'
-alias stp='mine ~/root/projects'
+alias stp='subl ~/root/projects'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias trello=nutrella
