@@ -11,28 +11,16 @@ setopt hist_reduce_blanks
 setopt hist_save_no_dups
 setopt pushdsilent
 
-# Exports
+# exports
 export BASH_ENV="~/.bashrc"
 export EDITOR='subl -w'
 export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
 
-# Disable when running PackManager translation scripts
+# cdpath
 export CDPATH=~/root:~/root/projects/exercism/ruby:~/root/projects/katas:~/root/projects/katas/_archive:~/root/projects/katas/_javascript:~/root/projects:~/src/production-scheduling:~/src/packmanager:~/src
-
-# Disable spring preloader
-#export DISABLE_SPRING=true
 
 # homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# gettext (PackManager translations)
-export PATH=/usr/local/opt/gettext/bin:$PATH
-
-# PackManager (foreman sometimes fails to start)
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-# PackManager (silence thor deprecation warnings when running rake tasks)
-export THOR_SILENCE_DEPRECATION=true
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
