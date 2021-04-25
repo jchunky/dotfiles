@@ -48,6 +48,7 @@ alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
 alias kill_jamf='sudo watch -n 0.1 pkill -9 -i jamf'
+alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run -o ./run; chmod a+x ./run'
 alias src='source ~/.zshrc'
 alias stp='mine ~/root/projects'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
