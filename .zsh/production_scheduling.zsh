@@ -7,6 +7,7 @@ function ps_update {
   cd ~/src/production-scheduling/frontend
   yarn install
   cd ~/src/production-scheduling/backend
+  bundle exec spring stop
   chruby `cat .ruby-version`
   bundle
   bundle exec rake db:schema:load
