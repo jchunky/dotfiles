@@ -46,7 +46,7 @@ source /usr/local/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 # Aliases
 alias a='alias | grep -i'
-alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver)'
+alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver) > /dev/null 2>&1'
 alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
 alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && popd'
 alias cheat='cat ~/root/projects/private/docs/cheat.txt'
@@ -87,6 +87,8 @@ function update_all {
   brew upgrade -q
   brew cleanup -q
   brew upgrade -q --cask
+
+  permit_chromedriver
 
   pushd ~/root/third_party/dev-toolbox && git pull && popd
   pushd ~/root/third_party/oh-my-zsh-plugins && git pull && popd
