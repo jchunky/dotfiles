@@ -39,7 +39,7 @@ alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.
 alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && popd'
 alias cheat='cat ~/root/projects/private/docs/cheat.txt'
 alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
-alias cop='rubocop -a'
+alias cop='rubocop -A'
 alias daily='update_all; daily_ruby_tasks'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
