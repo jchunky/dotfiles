@@ -41,7 +41,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-you-should-use
 source /usr/local/share/zsh-you-should-use/you-should-use.plugin.zsh
 
-# Aliases
+# aliases
 alias a='alias | grep -i'
 alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver) > /dev/null 2>&1'
 alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
@@ -65,14 +65,14 @@ alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias trello=nutrella
 
-# Git
+# git
 alias gd='git diff -b'
 alias gdca='git diff -b --cached'
 alias gdcw='git diff -b --cached --word-diff'
 alias gds='git diff -b --staged'
 alias gdw='git diff -b --word-diff'
 
-# Functions
+# functions
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
 function merge_files { awk 'FNR==1{print ""}1' $@ }
 function mkpr {
@@ -104,12 +104,12 @@ function update_gems {
   gem update  bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
 }
 
-# Public zsh files
+# public zsh files
 for dotfile in ~/.zsh/*.zsh; do
   source "$dotfile"
 done
 
-# Private zsh files
+# private zsh files
 for dotfile in ~/root/projects/private/.zsh/*.zsh; do
   source "$dotfile"
 done
