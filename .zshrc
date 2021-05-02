@@ -19,9 +19,9 @@ export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
 # cdpath
 export CDPATH=~/root/projects/dotfiles/.bin:$CDPATH
 export CDPATH=~/root/projects/exercism/ruby:$CDPATH
-export CDPATH=~/root/projects/katas/_archive:$CDPATH
-export CDPATH=~/root/projects/katas/_javascript:$CDPATH
-export CDPATH=~/root/projects/katas/_others:$CDPATH
+export CDPATH=~/root/projects/katas/javascript:$CDPATH
+export CDPATH=~/root/projects/katas/others:$CDPATH
+export CDPATH=~/root/projects/katas/ruby:$CDPATH
 export CDPATH=~/root/projects/katas:$CDPATH
 export CDPATH=~/root/projects:$CDPATH
 export CDPATH=~/root:$CDPATH
