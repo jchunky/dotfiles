@@ -17,7 +17,3 @@ detectors:
   #   enabled: true
   # UtilityFunction:
   #   public_methods_only: true
-exclude_paths:
-  - lib/legacy
-  - lib/rake/legacy_tasks
-  - lib/smelly.rb
