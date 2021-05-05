@@ -8,8 +8,8 @@ function ps_update {
   yarn install
   cd ~/src/production-scheduling/backend
   chruby `cat .ruby-version`
-  bundle exec spring stop
   bundle
+  bundle exec spring stop
   bundle exec rake db:schema:load
   bundle exec rake dev:reset_seed
   cd ..
