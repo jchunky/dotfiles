@@ -82,11 +82,12 @@ function mkpr {
 function update_all {
   tldr --update
 
+  brew cleanup -q
   brewdump
   brew update -q
   brew upgrade -q
-  brew cleanup -q
   brew upgrade -q --cask
+  brew cleanup -q
 
   permit_chromedriver
 
