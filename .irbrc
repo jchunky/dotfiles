@@ -1,6 +1,11 @@
 IRB.conf[:SAVE_HISTORY] = 200
 IRB.conf[:HISTORY_FILE] = '~/.irb-history'
 
+def uuid
+  require "securerandom"
+  SecureRandom.uuid
+end
+
 def set_account(id)
   Account.find(id).set_schema_search_path
 end
