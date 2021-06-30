@@ -24,6 +24,8 @@ alias ks='kill_all_phantomjs; n karma start --browsers=PhantomJS'
 alias pmc='n gulp clean; rm -rf client/bower_components; rm -rf node_modules; rm -rf public/assets; rm -rf public/client/bower_components; pmu'
 alias pmm='bundle exec rake db:migrate db:test:update;'
 alias rn='RAILS_NEXT=true '
+alias oc_cop='thor nucop:cli:diff_enforced --auto-correct'
+alias oc_update='bundle; pmu'
 
 function kill_all_phantomjs() { pkill -9 -i -f phantomjs }
 function kill_processes_listening_on() { lsof -i:$1 -t | xargs kill; }
