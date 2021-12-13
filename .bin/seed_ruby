@@ -1,5 +1,6 @@
 #!/bin/bash
 
 cp ~/.bin/.seed_ruby/* .
+cp ~/.bin/.seed_ruby/.g* .
 cp ~/.bin/.seed_ruby/.r* .
 bundle

@@ -2,4 +2,5 @@
 
 cp ~/.bin/.seed_js/* .
 cp ~/.bin/.seed_js/.e* .
+cp ~/.bin/.seed_js/.g* .
 yarn install
