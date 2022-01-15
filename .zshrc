@@ -50,7 +50,7 @@ alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && po
 alias cheat='cat ~/root/projects/private/docs/notes/cheat.txt'
 alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
-alias daily='cd ~; update_all; daily_ruby_tasks'
+alias daily='cd ~; rm -rf /usr/local/var/homebrew/locks; update_all; daily_ruby_tasks'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
 alias flush_dns_cache='sudo killall -HUP mDNSResponder'
