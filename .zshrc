@@ -36,6 +36,11 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
 # zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -59,8 +64,7 @@ alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
 alias kill_jamf='sudo watch -n 0.1 pkill -9 -i jamf'
 alias minep='mine ~/root/projects'
-alias pip='pip3'
-alias py='python3'
+alias py='python'
 alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run -o ./run; chmod a+x ./run'
 alias seed_run_cop='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run_cop -o ./run; chmod a+x ./run'
 alias src='source ~/.zshrc'
