@@ -1,0 +1,36 @@
+#!/bin/zsh
+
+source ~/.zshrc
+
+echo "\nTerminating chrome processes..."
+pkill -9 -i chrome
+
+echo "\nMarking packmanager test directories in rubymine..."
+cd ~/src/packmanager && chruby `cat .ruby-version` && bundle exec ruby ./development/rubymine/mark_directories.rb
+
+echo "\nUpdating private git repo..."
+cd ~/root/projects/private && gaa && gcmsg "auto-update"; gp
+
+echo "\nUpdating tldr..."
+tldr --update
+
+echo "\nUpdating dev-toolbox..."
+cd ~/root/third_party/dev-toolbox && git pull
+
+echo "\nUpdating oh-my-zsh-plugins..."
+cd ~/root/third_party/oh-my-zsh-plugins && git pull
+
+echo "\nDeleting stale branches of production-scheduling..."
+cd ~/src/production-scheduling && git fetch -p && delete_stale_branches
+
+echo "\nDeleting stale branches of packmanager..."
+cd ~/src/packmanager && git fetch -p && delete_stale_branches
+
+echo "\nStopping spring in packmanager..."
+cd ~/src/packmanager && chruby `cat .ruby-version` && stop_spring
+
+echo "\nStopping spring in production-scheduling..."
+cd ~/src/production-scheduling/backend && chruby `cat .ruby-version` && stop_spring
+
+echo "\nUpdating homebrew..."
+update_homebrew

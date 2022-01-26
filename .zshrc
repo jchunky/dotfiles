@@ -55,7 +55,6 @@ alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && po
 alias cheat='cat ~/root/projects/private/docs/notes/cheat.txt'
 alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
-alias daily='cd ~; rm -rf /usr/local/var/homebrew/locks; update_all; daily_ruby_tasks'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
 alias flush_dns_cache='sudo killall -HUP mDNSResponder'
@@ -87,25 +86,19 @@ function mkpr {
   BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD);
   hub pull-request -m "${BRANCH_NAME}"
 }
-function update_all {
-  tldr --update
-
+function stop_spring {
+  bundle --quiet
+  bundle exec spring stop
+  bundle exec rails tmp:clear
+}
+function update_homebrew {
   brew cleanup -q
   brewdump
   brew update -q
   brew upgrade -q
   brew upgrade -q --cask
   brew cleanup -q
-
   permit_chromedriver
-
-  pushd ~/root/third_party/dev-toolbox && git pull && popd
-  pushd ~/root/third_party/oh-my-zsh-plugins && git pull && popd
-
-  pushd ~/src/production-scheduling && git fetch -p && delete_stale_branches && popd
-  pushd ~/src/packmanager && git fetch -p && delete_stale_branches && popd
-
-  pushd ~/root/projects/private && gaa && gcmsg "auto-update"; gp && popd
 }
 function update_gems {
   gem update --system
