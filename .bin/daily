@@ -3,7 +3,7 @@
 source ~/.zshrc
 
 echo "\nTerminating chrome processes..."
-pkill -9 -i chrome
+kill_chrome
 
 echo "\nMarking packmanager test directories in rubymine..."
 cd ~/src/packmanager && chruby `cat .ruby-version` && bundle exec ruby ./development/rubymine/mark_directories.rb

@@ -61,6 +61,7 @@ alias flush_dns_cache='sudo killall -HUP mDNSResponder'
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
+alias kill_chrome='pkill -9 -i chrome'
 alias kill_jamf='sudo watch -n 0.1 pkill -9 -i jamf'
 alias minep='mine ~/root/projects'
 alias py='python'
