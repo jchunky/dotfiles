@@ -4,7 +4,7 @@ export MESSAGE_BUS_CONSUMER_GROUP_ID=chunky
 alias ps_cop='rubocop -A'
 alias ps_test='rake test:rspec'
 
-function ps_update {
+function psu {
   cd ~/src/production-scheduling/frontend
   yarn install
   cd ~/src/production-scheduling/backend
