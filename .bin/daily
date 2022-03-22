@@ -5,6 +5,9 @@ source ~/.zshrc
 echo "\nTerminating chrome processes..."
 kill_chrome
 
+echo "\nTerminating docker processes..."
+kill_docker
+
 echo "\nMarking packmanager test directories in rubymine..."
 cd ~/src/packmanager && chruby `cat .ruby-version` && bundle exec ruby ./development/rubymine/mark_directories.rb
 
