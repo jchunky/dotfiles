@@ -30,6 +30,7 @@ export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
 
 # homebrew
+export HOMEBREW_NO_ENV_HINTS=true
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # nvm
