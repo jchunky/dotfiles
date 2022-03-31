@@ -1,6 +1,7 @@
 # zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 DISABLE_UPDATE_PROMPT=true
 plugins=(bundler chruby git gitfast history nulogy ruby sublime timer $plugins)
 source $ZSH/oh-my-zsh.sh

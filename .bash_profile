@@ -1,1 +1,3 @@
+# Interactive shell
+
 source ~/.bashrc
