@@ -11,6 +11,7 @@ function psu {
   chruby `cat .ruby-version`
   bundle
   bundle exec spring stop
+  bundle exec rake db:test:prepare
   bundle exec rake db:schema:load
   bundle exec rake dev:reset_seed
   cd ..
