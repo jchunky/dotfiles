@@ -21,9 +21,11 @@ alias i18n='bundle exec rake i18n:js:extract'
 alias jstest='npm test'
 alias killall='kill_processes_listening_on 3000; kill_processes_listening_on 5500; kill_processes_listening_on 5555; pkill -9 -i -f nginx; pkill -9 -i -f unicorn; pkill -9 -i -f node;'
 alias ks='kill_all_phantomjs; n karma start --browsers=PhantomJS'
+alias pm_clean='n gulp clean; rm -rf client/bower_components; rm -rf node_modules; rm -rf public/assets; rm -rf public/client/bower_components'
 alias pm_cop='thor nucop:cli:diff_enforced --auto-correct'
-alias pmc='n gulp clean; rm -rf client/bower_components; rm -rf node_modules; rm -rf public/assets; rm -rf public/client/bower_components; pmu'
-alias pmm='bundle exec rake db:migrate db:test:update;'
+alias pm_db_update='bundle exec rake db:migrate db:test:update;'
+alias pm_reset='bundle; rails db:reset; pmu; pm_user'
+alias pm_update='bundle; pmu'
 alias rn='RAILS_NEXT=true '
 
 function kill_all_phantomjs() { pkill -9 -i -f phantomjs }
