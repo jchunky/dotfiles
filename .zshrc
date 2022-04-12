@@ -64,6 +64,7 @@ alias flush_dns_cache='sudo killall -HUP mDNSResponder'
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
+alias kill_apps='sudo chmod a-x "/Applications/1Password 7.app"; sudo chmod a-x "/Applications/Slack.app"'
 alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
 alias kill_jamf='sudo watch -n 0.1 pkill -9 -i jamf'
