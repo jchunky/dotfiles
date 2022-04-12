@@ -25,6 +25,7 @@ alias pm_clean='n gulp clean; rm -rf client/bower_components; rm -rf node_module
 alias pm_cop='thor nucop:cli:diff_enforced --auto-correct'
 alias pm_db_update='bundle exec rake db:migrate db:test:update;'
 alias pm_reset='bundle; rails db:reset; pmu; pm_user'
+alias pm_seed='rake nulogy:tdc:candy_pack:schedule:fs_variety_mix'
 alias pm_update='bundle; pmu'
 alias rn='RAILS_NEXT=true '
 

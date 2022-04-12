@@ -1,6 +1,6 @@
 # zsh
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+export ZSH=$HOME/.oh-my-zsh
+export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 DISABLE_UPDATE_PROMPT=true
 plugins=(bundler chruby git gitfast history nulogy ruby sublime timer $plugins)
@@ -15,7 +15,7 @@ setopt pushdsilent
 # exports
 export BASH_ENV="~/.bashrc"
 export EDITOR='subl -w'
-export PATH=.:./bin:~/.bin:~/root/projects/private/.bin:$PATH
+export PATH=.:./bin:~/.bin:~/bin:~/root/projects/private/.bin:$PATH
 
 # cdpath
 export CDPATH=~/root/projects/dotfiles/.bin:$CDPATH
@@ -87,10 +87,6 @@ alias gdw='git diff -b --word-diff'
 # functions
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
 function merge_files { awk 'FNR==1{print ""}1' $@ }
-function mkpr {
-  BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD);
-  hub pull-request -m "${BRANCH_NAME}"
-}
 function stop_spring {
   bundle --quiet
   bundle exec spring stop
@@ -109,6 +105,15 @@ function update_gems {
   gem update --system
   gem install bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
   gem update  bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
+}
+
+##
+# mkpr setup reference:
+# https://github.com/jchunky/notes/wiki/Create-alias-for-making-pull-requests
+#
+function mkpr {
+  BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD);
+  hub pull-request -m "${BRANCH_NAME}"
 }
 
 # public zsh files
