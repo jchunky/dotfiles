@@ -59,15 +59,15 @@ alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
-alias disable_1password='sudo chmod a-x "/Applications/1Password 7.app"'
-alias flush_dns_cache='sudo killall -HUP mDNSResponder'
+alias disable_1password='p1; sudo chmod a-x "/Applications/1Password 7.app"'
+alias flush_dns_cache='p1; sudo killall -HUP mDNSResponder'
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
-alias kill_apps='sudo chmod a-x "/Applications/1Password 7.app"; sudo chmod a-x "/Applications/Slack.app"'
+alias kill_apps='p1; sudo chmod a-x "/Applications/1Password 7.app"; sudo chmod a-x "/Applications/Slack.app"'
 alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
-alias kill_jamf='sudo watch -n 0.1 pkill -9 -i jamf'
+alias kill_jamf='p1; sudo watch -n 0.1 pkill -9 -i jamf'
 alias minep='mine ~/root/projects'
 alias py='python'
 alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run -o ./run; chmod a+x ./run'
@@ -94,6 +94,7 @@ function stop_spring {
   bundle exec rails tmp:clear
 }
 function update_homebrew {
+  rm -rf /usr/local/var/homebrew/locks
   brew cleanup -q
   brewdump
   brew update -q
