@@ -44,6 +44,10 @@ rescue Exception => ex
   puts ex
 end
 
+load(:rails) do
+  Time.zone = "Eastern Time (US & Canada)"
+end
+
 load do
   require 'interactive_editor'
 end
