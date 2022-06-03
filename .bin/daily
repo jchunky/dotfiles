@@ -30,13 +30,13 @@ echo "\nDeleting stale branches of packmanager..."
 cd ~/src/packmanager && git fetch -p && delete_stale_branches
 
 echo "\nUpdating rubygems system in default ruby..."
-cd ~ && gem update --system
+cd ~ && chruby `cat .ruby-version` && gem update --system
 
 echo "\nUpdating rubygems system in packmanager..."
-cd ~/src/packmanager && gem update --system
+cd ~/src/packmanager && chruby `cat .ruby-version` && gem update --system && bundle update --bundler --quiet
 
 echo "\nUpdating rubygems system in production-scheduling..."
-cd ~/src/production-scheduling && gem update --system
+cd ~/src/production-scheduling/backend && chruby `cat .ruby-version` && gem update --system && bundle update --bundler --quiet
 
 echo "\nStopping spring in packmanager..."
 cd ~/src/packmanager && chruby `cat .ruby-version` && stop_spring
