@@ -12,31 +12,31 @@ echo "\nMarking packmanager test directories in rubymine..."
 cd ~/src/packmanager && chruby `cat .ruby-version` && bundle exec ruby ./development/rubymine/mark_directories.rb
 
 echo "\nUpdating private git repo..."
-cd ~/root/projects/private && gaa && gcmsg "auto-update"; gp
+cd ~/root/projects/private && gaa && git commit -m "auto-update"; gp --quiet
 
 echo "\nUpdating tldr..."
 tldr --update
 
 echo "\nUpdating dev-toolbox..."
-cd ~/root/third_party/dev-toolbox && git pull
+cd ~/root/third_party/dev-toolbox && git pull --quiet
 
 echo "\nUpdating oh-my-zsh-plugins..."
-cd ~/root/third_party/oh-my-zsh-plugins && git pull
+cd ~/root/third_party/oh-my-zsh-plugins && git pull --quiet
 
 echo "\nDeleting stale branches of production-scheduling..."
-cd ~/src/production-scheduling && git fetch -p && delete_stale_branches
+cd ~/src/production-scheduling && git fetch -p --quiet && delete_stale_branches
 
 echo "\nDeleting stale branches of packmanager..."
-cd ~/src/packmanager && git fetch -p && delete_stale_branches
+cd ~/src/packmanager && git fetch -p --quiet && delete_stale_branches
 
 echo "\nUpdating rubygems system in default ruby..."
-cd ~ && chruby `cat .ruby-version` && gem update --system
+cd ~ && chruby `cat .ruby-version` && gem update --system --silent
 
 echo "\nUpdating rubygems system in packmanager..."
-cd ~/src/packmanager && chruby `cat .ruby-version` && gem update --system && bundle update --bundler --quiet
+cd ~/src/packmanager && chruby `cat .ruby-version` && gem update --system --silent && bundle update --bundler --quiet
 
 echo "\nUpdating rubygems system in production-scheduling..."
-cd ~/src/production-scheduling/backend && chruby `cat .ruby-version` && gem update --system && bundle update --bundler --quiet
+cd ~/src/production-scheduling/backend && chruby `cat .ruby-version` && gem update --system --silent && bundle update --bundler --quiet
 
 echo "\nStopping spring in packmanager..."
 cd ~/src/packmanager && chruby `cat .ruby-version` && stop_spring
