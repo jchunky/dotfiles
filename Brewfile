@@ -14,7 +14,7 @@ brew "bison"
 brew "chruby"
 brew "gettext"
 brew "curl"
-brew "docker"
+brew "docker", link: false
 brew "entr"
 brew "exercism"
 brew "git"
