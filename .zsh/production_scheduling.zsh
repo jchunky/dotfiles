@@ -6,6 +6,7 @@ alias ps_test='rake test:rspec'
 
 function ps_reset {
   cd ~/src/production-scheduling/frontend
+  nvm use
   yarn install
   cd ~/src/production-scheduling/backend
   chruby `cat .ruby-version`
@@ -18,6 +19,7 @@ function ps_reset {
 
 function ps_update {
   cd ~/src/production-scheduling/frontend
+  nvm use
   yarn install
   cd ~/src/production-scheduling/backend
   chruby `cat .ruby-version`
