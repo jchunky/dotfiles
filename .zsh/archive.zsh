@@ -1,3 +1,9 @@
+# NOTE: pyenv causes .bashrc to be loaded twice
+# pyenv
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+
 # uncrustify
 # alias uncrustify_all='find . \( -name "*.cpp" -o -name "*.c" -o -name "*.h" \) -exec uncrustify -c ~/uncrustify.cfg --replace --no-backup {} +'
 
