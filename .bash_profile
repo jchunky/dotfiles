@@ -1,3 +1,3 @@
-# Interactive shell
+# Interactive login shell
 
 source ~/.bashrc

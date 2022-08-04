@@ -30,6 +30,10 @@ export CDPATH=~/root:$CDPATH
 export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
 
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
@@ -88,6 +92,7 @@ alias gdw='git diff -b --word-diff'
 # functions
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
 function merge_files { awk 'FNR==1{print ""}1' $@ }
+function ruby_use { chruby `cat .ruby-version` }
 function stop_spring {
   bundle --quiet
   bundle exec spring stop

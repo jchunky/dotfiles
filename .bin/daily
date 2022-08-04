@@ -9,7 +9,7 @@ echo "\nTerminating chrome processes..."
 kill_chrome
 
 echo "\nMarking packmanager test directories in rubymine..."
-cd ~/src/packmanager && chruby `cat .ruby-version` && bundle exec ruby ./development/rubymine/mark_directories.rb
+cd ~/src/packmanager && ruby_use && ruby ./development/rubymine/mark_directories.rb
 
 echo "\nUpdating private git repo..."
 cd ~/root/projects/private && gaa && git commit -m "auto-update"; gp --quiet
@@ -30,19 +30,19 @@ echo "\nDeleting stale branches of packmanager..."
 cd ~/src/packmanager && git fetch -p --quiet && delete_stale_branches
 
 echo "\nUpdating rubygems system in default ruby..."
-cd ~ && chruby `cat .ruby-version` && gem update --system --silent
+cd ~ && ruby_use && gem update --system --silent
 
 echo "\nUpdating rubygems system in packmanager..."
-cd ~/src/packmanager && chruby `cat .ruby-version` && gem update --system --silent && bundle update --bundler --quiet
+cd ~/src/packmanager && ruby_use && gem update --system --silent && bundle update --bundler --quiet
 
 echo "\nUpdating rubygems system in production-scheduling..."
-cd ~/src/production-scheduling/backend && chruby `cat .ruby-version` && gem update --system --silent && bundle update --bundler --quiet
+cd ~/src/production-scheduling/backend && ruby_use && gem update --system --silent && bundle update --bundler --quiet
 
 echo "\nStopping spring in packmanager..."
-cd ~/src/packmanager && chruby `cat .ruby-version` && stop_spring
+cd ~/src/packmanager && ruby_use && stop_spring
 
 echo "\nStopping spring in production-scheduling..."
-cd ~/src/production-scheduling/backend && chruby `cat .ruby-version` && stop_spring
+cd ~/src/production-scheduling/backend && ruby_use && stop_spring
 
 echo "\nUpdating homebrew..."
 update_homebrew
