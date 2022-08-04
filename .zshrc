@@ -30,10 +30,6 @@ export CDPATH=~/root:$CDPATH
 export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
 
-# chruby
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
