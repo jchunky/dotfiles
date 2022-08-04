@@ -1,3 +1,4 @@
+# @production_scheduling_shell_config
 export ESLINT_NO_DEV_ERRORS=true
 export MESSAGE_BUS_CONSUMER_GROUP_ID=chunky
 

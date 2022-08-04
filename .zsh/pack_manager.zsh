@@ -1,11 +1,9 @@
+# @pack_manager_shell_config
 export QUEUE=*
 export NGINX_PORT=3000
 export UNICORN_PORT=5555
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
 # foreman sometimes fails to start
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
 # silence thor deprecation warnings when running rake tasks
 export THOR_SILENCE_DEPRECATION=true
 
