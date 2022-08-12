@@ -8,6 +8,9 @@ kill_apps
 echo "\nTerminating chrome processes..."
 kill_chrome
 
+echo "\nTerminating ruby processes..."
+killall -q ruby
+
 echo "\nMarking packmanager test directories in rubymine..."
 cd ~/src/packmanager && ruby_use && ruby ./development/rubymine/mark_directories.rb
 
