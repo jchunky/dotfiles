@@ -1,7 +1,8 @@
 # Interactive non-login shell
 
 # exports
-PROMPT_COMMAND="date +%H%M"
+export PROMPT_COMMAND="date +%H%M"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Silence pushd and popd
 pushd() {
