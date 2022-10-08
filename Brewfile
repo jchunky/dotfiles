@@ -16,6 +16,7 @@ brew "curl"
 brew "docker", link: false
 brew "entr"
 brew "exercism"
+brew "gh"
 brew "git"
 brew "gmp"
 brew "hub"
