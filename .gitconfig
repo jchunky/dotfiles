@@ -12,7 +12,7 @@
   # integrate = !sh -c 'git push $1 $2:ready-to-merge/into-master/${2}' -
 [core]
   # Use custom `.gitignore` and `.gitattributes`
-  excludesfile = ~/.gitignore
+  excludesfile = /Users/jasonc/.gitignore
   attributesfile = ~/.gitattributes
   commentchar = $
   hooksPath = ~/.git-templates/hooks
@@ -50,3 +50,5 @@
   process = git-lfs filter-process
   required = true
   clean = git-lfs clean -- %f
+[commit]
+  template = /Users/jasonc/.stCommitMsg
