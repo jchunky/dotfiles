@@ -30,6 +30,9 @@ export CDPATH=~/root:$CDPATH
 export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
 
+# docker desktop
+source /Users/jasonc/.docker/init-zsh.sh || true
+
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
