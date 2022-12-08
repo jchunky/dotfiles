@@ -31,7 +31,7 @@ export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
 
 # docker desktop
-source /Users/jasonc/.docker/init-zsh.sh || true
+source ~/.docker/init-zsh.sh
 
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
