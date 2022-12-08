@@ -4,6 +4,7 @@ export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 DISABLE_UPDATE_PROMPT=true
 plugins=(bundler chruby git gitfast history nulogy ruby sublime timer $plugins)
+# plugins=(brew gem kubectl macos rake wd $plugins)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 setopt hist_find_no_dups
@@ -29,9 +30,6 @@ export CDPATH=~/root/projects:$CDPATH
 export CDPATH=~/root:$CDPATH
 export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
-
-# docker desktop
-source ~/.docker/init-zsh.sh
 
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
