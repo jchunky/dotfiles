@@ -19,13 +19,11 @@ export EDITOR='subl -w'
 export PATH=.:./bin:~/.bin:~/bin:~/root/projects/private/.bin:$PATH
 
 # cdpath
+export CDPATH=~/root/projects/apps:$CDPATH
 export CDPATH=~/root/projects/dotfiles/.bin:$CDPATH
 export CDPATH=~/root/projects/exercism/ruby:$CDPATH
-export CDPATH=~/root/projects/katas/apps:$CDPATH
-export CDPATH=~/root/projects/katas/javascript:$CDPATH
-export CDPATH=~/root/projects/katas/others:$CDPATH
-export CDPATH=~/root/projects/katas/ruby:$CDPATH
 export CDPATH=~/root/projects/katas:$CDPATH
+export CDPATH=~/root/projects/others:$CDPATH
 export CDPATH=~/root/projects:$CDPATH
 export CDPATH=~/root:$CDPATH
 export CDPATH=~/src/production-scheduling:$CDPATH
