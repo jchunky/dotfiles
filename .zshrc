@@ -45,16 +45,17 @@ source /usr/local/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 # aliases
 alias a='alias | grep -i'
-alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver) > /dev/null 2>&1'
 alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
 alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && popd'
+alias bundle_update='bundle update --bundler --quiet'
 alias cheat='cat ~/root/projects/private/docs/notes/cheat.txt'
 alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
-alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias dco='docker-compose'
+alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias disable_1password='p1; sudo chmod a-x "/Applications/1Password.app"'
 alias flush_dns_cache='p1; sudo killall -HUP mDNSResponder'
+alias gem_update='gem update --system --silent'
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
@@ -63,13 +64,14 @@ alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
 alias kill_jamf='p1; sudo watch -n 0.1 pkill -9 -i jamf'
 alias minep='mine ~/root/projects'
+alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver) > /dev/null 2>&1'
 alias py='python'
 alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run -o ./run; chmod a+x ./run'
 alias seed_run_cop='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run_cop -o ./run; chmod a+x ./run'
 alias src='source ~/.zshrc'
-alias stp='subl ~/root/projects'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
+alias stp='subl ~/root/projects'
 alias trello=nutrella
 
 # git

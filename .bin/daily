@@ -33,13 +33,13 @@ echo "\nDeleting stale branches of packmanager..."
 cd ~/src/packmanager && git fetch -p --quiet && delete_stale_branches
 
 echo "\nUpdating rubygems system in default ruby..."
-cd ~ && ruby_use && gem update --system --silent
+cd ~ && ruby_use && gem_update
 
 echo "\nUpdating rubygems system in packmanager..."
-cd ~/src/packmanager && ruby_use && gem update --system --silent && bundle update --bundler --quiet
+cd ~/src/packmanager && ruby_use && gem_update && bundle_update && gco Gemfile.lock
 
 echo "\nUpdating rubygems system in production-scheduling..."
-cd ~/src/production-scheduling/backend && ruby_use && gem update --system --silent && bundle update --bundler --quiet
+cd ~/src/production-scheduling/backend && ruby_use && gem_update && bundle_update && gco Gemfile.lock
 
 echo "\nStopping spring in packmanager..."
 cd ~/src/packmanager && ruby_use && stop_spring
