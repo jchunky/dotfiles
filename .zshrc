@@ -68,11 +68,19 @@ alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver) >
 alias py='python'
 alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run -o ./run; chmod a+x ./run'
 alias seed_run_cop='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run_cop -o ./run; chmod a+x ./run'
+alias sp='open -n -a "Google Chrome" --args "https://jamboard.google.com/d/15l8zMMOTIQc5iVgxQ4_7Krn_3F0SK8bDRukbzo7HdW8/viewer?f=0"'
 alias src='source ~/.zshrc'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stp='subl ~/root/projects'
 alias trello=nutrella
+
+##
+# gh setup reference:
+# https://github.com/jchunky/notes/wiki/Create-alias-for-making-pull-requests
+#
+alias mkpr='gh pr create -f'
+alias vwpr='mkpr; gh pr view --web'
 
 # git
 alias gd='git diff -b'
@@ -104,15 +112,6 @@ function update_gems {
   gem update --system
   gem install bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
   gem update  bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
-}
-
-##
-# mkpr setup reference:
-# https://github.com/jchunky/notes/wiki/Create-alias-for-making-pull-requests
-#
-function mkpr {
-  BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD);
-  hub pull-request -m "${BRANCH_NAME}"
 }
 
 # public zsh files
