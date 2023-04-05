@@ -19,7 +19,7 @@ alias i18n='bundle exec rake i18n:js:extract'
 alias jstest='npm test'
 alias ks='kill_all_phantomjs; n karma start --browsers=PhantomJS'
 alias pm_clean='n gulp clean; rm -rf client/bower_components; rm -rf node_modules; rm -rf public/assets; rm -rf public/client/bower_components'
-alias pm_cop='thor nucop:cli:diff_enforced --auto-correct'
+alias pm_cop='nucop diff_enforced --autocorrect-all'
 alias pm_db_update='bundle exec rake db:migrate db:test:update;'
 alias pm_help='alias |grep pm_'
 alias pm_kill='pmkill; pkill -9 -i -f nginx; pkill -9 -i -f unicorn; pkill -9 -i -f node'
@@ -36,7 +36,6 @@ function kill_processes_listening_on() { lsof -i:$1 -t | xargs kill; }
 function n() { node_modules/.bin/$@ ;}
 function kmobile() { kill_all_phantomjs; `pwd`/node_modules/.bin/karma start karma.mobile.conf.js --browsers=PhantomJS }
 function kdesktop() { kill_all_phantomjs; `pwd`/node_modules/.bin/karma start karma.conf.js --browsers=PhantomJS }
-function nucop { be thor nucop:diff --added-only && be thor nucop:diff_enforced }
 function rubocorrect() { rubocop $1 --config .rubocop.backlog.yml -a --only=$2 }
 function ruboffenses() { rubocop $1 --config .rubocop.backlog.yml --format offenses }
 function rubofile() { rubocop $1 --config .rubocop.backlog.yml }
