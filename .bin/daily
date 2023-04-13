@@ -14,6 +14,9 @@ killall -q ruby
 echo "\nMarking packmanager test directories in rubymine..."
 cd ~/src/packmanager && ruby_use && ruby ./development/rubymine/mark_directories.rb
 
+echo "\nPrune docker..."
+docker image prune -a -f && docker system prune -f
+
 echo "\nUpdating private git repo..."
 cd ~/root/projects/private && gaa && git commit -m "auto-update"; gp --quiet
 
