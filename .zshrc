@@ -48,7 +48,7 @@ alias a='alias | grep -i'
 alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
 alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && popd'
 alias bundle_update='bundle update --bundler --quiet'
-alias cheat='cat ~/root/projects/private/docs/notes/cheat.txt'
+alias cheat='cat ~/root/projects/private/notes/cheat.txt'
 alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
 alias dco='docker-compose'
@@ -73,7 +73,6 @@ alias src='source ~/.zshrc'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stp='subl ~/root/projects'
-alias trello=nutrella
 
 ##
 # gh setup reference:
