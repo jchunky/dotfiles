@@ -3,6 +3,7 @@ IRB.conf[:HISTORY_FILE] = '~/.irb-history'
 
 def ras
   require "active_support/all"
+  Time.zone = "Eastern Time (US & Canada)"
 end
 
 def uuid
