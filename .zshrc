@@ -73,6 +73,7 @@ alias src='source ~/.zshrc'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stp='subl ~/root/projects'
+alias trello=nutrella
 
 ##
 # gh setup reference:
