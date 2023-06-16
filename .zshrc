@@ -55,7 +55,10 @@ alias dco='docker-compose'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
 alias disable_1password='p1; sudo chmod a-x "/Applications/1Password.app"'
 alias flush_dns_cache='p1; sudo killall -HUP mDNSResponder'
-alias gem_update='gem update --system --silent'
+alias gem_update='gem_update_system; gem_install; gem_update_gems'
+alias gem_update_system='gem update --system --silent'
+alias gem_install='gem install --silent bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up'
+alias gem_update_gems='gem update --silent bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up'
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
@@ -107,11 +110,6 @@ function update_homebrew {
   brew upgrade -q --cask
   brew cleanup -q
   permit_chromedriver
-}
-function update_gems {
-  gem update --system
-  gem install bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
-  gem update  bundler byebug flog foreman guard interactive_editor nutrella pony pry rake rspec rubocop sinatra unicorn whats_up
 }
 
 # public zsh files
