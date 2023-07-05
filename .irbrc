@@ -1,5 +1,6 @@
-IRB.conf[:SAVE_HISTORY] = 200
 IRB.conf[:HISTORY_FILE] = '~/.irb-history'
+IRB.conf[:SAVE_HISTORY] = 200
+IRB.conf[:USE_AUTOCOMPLETE] = false
 
 def ras
   require "active_support/all"
