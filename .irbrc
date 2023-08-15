@@ -39,9 +39,11 @@ load(:irb) do
 end
 
 load(:rails) do
-  # Including FactoryBot breaks the following command:
-  # WorkOrder.first.update(description: "lkj")
-  #include FactoryBot::Syntax::Methods
+  if Rails.application.class.module_parent_name == "Packmanager"
+    require_relative "/Users/jasonc/src/packmanager/modules/generic/spec_utils/spec/factories_and_defaults"
+    require_relative "/Users/jasonc/src/packmanager/modules/generic/spec_utils/spec/support/helpers/bom_dsl"
+    include FactoryBot::Syntax::Methods
+  end
 rescue Exception => ex
   puts ex
 end
