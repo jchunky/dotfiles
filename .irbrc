@@ -39,16 +39,6 @@ load(:irb) do
 end
 
 load(:rails) do
-  if Rails.application.class.module_parent_name == "Packmanager"
-    require_relative "/Users/jasonc/src/packmanager/modules/generic/spec_utils/spec/factories_and_defaults"
-    require_relative "/Users/jasonc/src/packmanager/modules/generic/spec_utils/spec/support/helpers/bom_dsl"
-    include FactoryBot::Syntax::Methods
-  end
-rescue Exception => ex
-  puts ex
-end
-
-load(:rails) do
   Time.zone = "Eastern Time (US & Canada)"
 end
 

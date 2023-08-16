@@ -1,34 +1,25 @@
+# .env
 export QUEUE=*
 export NGINX_PORT=3000
 export UNICORN_PORT=5555
+
+# development.env
+PM_CAPYBARA_MAX_WAIT_TIME_IN_SECONDS=600
+PM_POLLING_INTERVAL_IN_SECONDS=600
+PM_REQUEST_TIMEOUT_IN_MINUTES=10
+PM_ENABLE_BOOTSNAP=true
+PM_SILENCE_CONSOLE_HINTS=true
+PM_SILENCE_RESQUE_LOGGING=true
+
+# Disable background tasks
+PM_EXECUTE_BACKGROUND_TASK_IMMEDIATELY=true
+PM_MINIMAL_SYSTEM_TASKS=true
 
 # Foreman sometimes fails to start
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Silence thor deprecation warnings when running rake tasks
 export THOR_SILENCE_DEPRECATION=true
-
-# Reduce the console noise in development by increasing the polling interval
-export PM_POLLING_INTERVAL_IN_SECONDS=60000
-
-# Debugging tweaks
-export CAPYBARA_MAX_WAIT_TIME=600
-export PM_REQUEST_TIMEOUT_IN_MINUTES=10
-
-# Disable backrounding of background tasks
-export RUN_BACKGROUND_TASKS_IMMEDIATELY=true
-
-# Open better_errors links directly in open RubyMine
-# export BETTER_ERRORS_EDITOR="x-mine://open?file=%{file}&line=%{line}"
-
-# Enable logging in the browser
-# export PM_BROWSER_LOGGING=true
-
-# Enable profiling tools in the browser (use 1 for enabled)
-# export PM_ENABLE_PROFILING=1
-
-# Enable the database analysis gems
-# export PM_STATIC_DATABASE_ANALYSIS=true
 
 alias bg1='be rake resque:scheduler'
 alias bg2='QUEUE=* bundle exec rake resque:work'
