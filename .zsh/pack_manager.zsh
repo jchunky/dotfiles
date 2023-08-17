@@ -12,7 +12,7 @@ export PM_SILENCE_CONSOLE_HINTS=true
 export PM_SILENCE_RESQUE_LOGGING=true
 
 # Disable background tasks
-export PM_EXECUTE_BACKGROUND_TASK_IMMEDIATELY=true
+export PM_EXECUTE_BACKGROUND_TASKS_IMMEDIATELY=true
 export PM_MINIMAL_SYSTEM_TASKS=true
 
 # Foreman sometimes fails to start
