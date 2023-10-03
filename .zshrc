@@ -53,7 +53,8 @@ alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
 alias dco='docker-compose'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
-alias disable_1password='p1; sudo chmod a-x "/Applications/1Password.app"'
+alias disable_apps='p1; sudo chmod a-x "/Applications/1Password 7.app"; sudo chmod a-x "/Applications/Slack.app"'
+alias disable_jamf='p1; sudo chmod a-x "/Applications/Jamf Connect.app"; sudo chmod a-x "/Applications/Jamf Trust.app"; sudo chmod a-x "/Applications/JamfProtect.app"'
 alias flush_dns_cache='p1; sudo killall -HUP mDNSResponder'
 alias gem_update='gem_update_system; gem_install; gem_update_gems'
 alias gem_update_system='gem update --system --silent'
@@ -62,7 +63,6 @@ alias gem_update_gems='gem update --silent bundler byebug flog foreman guard int
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
-alias kill_apps='p1; sudo chmod a-x "/Applications/1Password 7.app"; sudo chmod a-x "/Applications/Slack.app"'
 alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
 alias kill_jamf='p1; sudo watch -n 0.1 pkill -9 -i jamf'
@@ -77,6 +77,7 @@ alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stp='subl ~/root/projects'
 alias trello=nutrella
+alias update_pgadmin='brew install --cask --force pgadmin4'
 
 ##
 # gh setup reference:

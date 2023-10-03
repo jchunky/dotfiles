@@ -2,8 +2,11 @@
 
 source ~/.zshrc
 
+echo "\nDisabling jamf..."
+disable_jamf
+
 echo "\nDisabling apps with browser integration..."
-kill_apps
+disable_apps
 
 echo "\nTerminating chrome processes..."
 kill_chrome
