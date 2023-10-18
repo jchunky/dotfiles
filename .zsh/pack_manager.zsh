@@ -44,6 +44,7 @@ alias pm_seed1='rake nulogy:tdc:candy_pack:schedule:fs_variety_mix'
 alias pm_seed2='rake nulogy:tdc:dane_post:schedule:fs_variety_mix'
 alias pm_update='bundle; pmu'
 alias rn='RAILS_NEXT=true '
+alias seed_work_orders='rails r development/scripts/seed_scripts/seed_work_orders.rb'
 
 function kill_all_phantomjs() { pkill -9 -i -f phantomjs }
 function kill_processes_listening_on() { lsof -i:$1 -t | xargs kill; }
