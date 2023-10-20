@@ -3,6 +3,7 @@ export ESLINT_NO_DEV_ERRORS=true
 export MESSAGE_BUS_CONSUMER_GROUP_ID=chunky
 
 alias ps_cop='bundle exec rubocop -A'
+alias ps_e2e='scripts/run_e2e_server.sh'
 alias ps_test='rake test:rspec'
 
 function ps_reset {
