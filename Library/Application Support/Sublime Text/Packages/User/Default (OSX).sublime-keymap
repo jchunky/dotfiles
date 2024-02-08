@@ -1,0 +1,7 @@
+[
+  { "keys": ["command+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  { "keys": ["command+j"], "command": "join_lines" },
+  { "keys": ["option+command+l"], "command": "run_macro_file", "args": { "file": "Packages/User/reindent_file.sublime-macro" } },
+  { "keys": ["option+down"], "command": "soft_undo" },
+  { "keys": ["option+up"], "command": "expand_selection", "args": {"to": "indentation"} },
+]
