@@ -44,7 +44,7 @@
 [pull]
   rebase = true
 [init]
-  defaultBranch = main
+	defaultBranch = main
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
@@ -52,3 +52,11 @@
   clean = git-lfs clean -- %f
 [commit]
   template = /Users/jasonc/.stCommitMsg
+[diff]
+	algorithm = histogram
+[merge]
+	conflictStyle = zdiff3
+[rebase]
+	updateRefs = true
+[rerere]
+	autoUpdate = true
