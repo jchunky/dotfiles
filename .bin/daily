@@ -18,7 +18,7 @@ echo "\nTerminating ruby processes..."
 killall -q ruby
 
 echo "\nMarking packmanager test directories in rubymine..."
-cd ~/src/packmanager && ruby_use && bundle && bundle exec ./development/rubymine/mark_directories.rb
+cd ~/src/packmanager && ruby_use && bundle --quiet && bundle exec ./development/rubymine/mark_directories.rb
 
 echo "\nPrune docker..."
 docker image prune -a -f && docker system prune -f
