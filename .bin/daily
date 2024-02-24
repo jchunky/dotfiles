@@ -50,11 +50,5 @@ cd ~/src/packmanager && ruby_use && gem_update && bundle_update && gco Gemfile.l
 echo "\nUpdating rubygems system in production-scheduling..."
 cd ~/src/production-scheduling/backend && ruby_use && gem_update && bundle_update && gco Gemfile.lock
 
-echo "\nStopping spring in packmanager..."
-cd ~/src/packmanager && ruby_use && stop_spring
-
-echo "\nStopping spring in production-scheduling..."
-cd ~/src/production-scheduling/backend && ruby_use && stop_spring
-
 echo "\nUpdating homebrew..."
 update_homebrew
