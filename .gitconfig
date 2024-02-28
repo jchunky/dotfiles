@@ -1,15 +1,14 @@
-[include]
-  path = ~/.gitconfig.local
 [alias]
-  # br = branch
-  # ci = commit
-  # co = checkout
-  # st = status
-  # su = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
-  # undo = reset --soft HEAD^
-  # l = log --date=short --graph --pretty='%Cred%h%Creset - %Cgreen%ad%Creset -%C(yellow)%d%Creset %s %Cblue[%an]%Creset'
-  # set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
-  # integrate = !sh -c 'git push $1 $2:ready-to-merge/into-master/${2}' -
+[branch]
+  autosetupmerge = true
+  sort = committerdate
+[color]
+  # Use colors in Git commands that are capable of colored output when outputting to the terminal
+  ui = true
+  branch = auto
+  diff = auto
+[commit]
+  template = /Users/jasonc/.stCommitMsg
 [core]
   # Use custom `.gitignore` and `.gitattributes`
   excludesfile = /Users/jasonc/.gitignore
@@ -19,44 +18,32 @@
 
   # Ignore Windows ^M line endings when 'git diff'
   pager = tr -d '\\r' | less -REX
-[color]
-  # Use colors in Git commands that are capable of colored output when outputting to the terminal
-  ui = true
-  branch = auto
-  diff = auto
-[push]
-  #default = simple
-  default = current
-[user]
-  name = Chunky
-[remote "origin"]
-  push = HEAD
-[branch]
-  autosetupmerge = true
-[remote]
-  pushdefault = origin
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[pull]
-  rebase = true
-[init]
-	defaultBranch = main
+[diff]
+	algorithm = histogram
+  colorMoved = default
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
   clean = git-lfs clean -- %f
-[commit]
-  template = /Users/jasonc/.stCommitMsg
-[diff]
-	algorithm = histogram
+[include]
+  path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
 [merge]
 	conflictStyle = zdiff3
+[pull]
+  rebase = true
+[push]
+  autoSetupRemote = true
+  default = current
 [rebase]
 	updateRefs = true
+[remote "origin"]
+  push = HEAD
+[remote]
+  pushdefault = origin
 [rerere]
 	autoUpdate = true
+[user]
+  name = Chunky
