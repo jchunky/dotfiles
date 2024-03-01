@@ -1,31 +1,26 @@
-[alias]
 [branch]
   autosetupmerge = true
   sort = committerdate
 [color]
-  # Use colors in Git commands that are capable of colored output when outputting to the terminal
-  ui = true
   branch = auto
   diff = auto
+  ui = true
 [commit]
-  template = /Users/jasonc/.stCommitMsg
+  template = ~/.stCommitMsg
 [core]
-  # Use custom `.gitignore` and `.gitattributes`
-  excludesfile = /Users/jasonc/.gitignore
   attributesfile = ~/.gitattributes
   commentchar = $
+  excludesfile = ~/.gitignore
   hooksPath = ~/.git-templates/hooks
-
-  # Ignore Windows ^M line endings when 'git diff'
   pager = tr -d '\\r' | less -REX
 [diff]
 	algorithm = histogram
   colorMoved = default
 [filter "lfs"]
-  smudge = git-lfs smudge -- %f
+  clean = git-lfs clean -- %f
   process = git-lfs filter-process
   required = true
-  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 [include]
   path = ~/.gitconfig.local
 [init]
