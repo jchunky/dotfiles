@@ -30,12 +30,12 @@ rescue Exception => ex
 end
 
 load(:irb) do
-  require 'whats_up/classic'
+  require 'object_oculus/classic'
 
-  # Fix whats_up for rails console
-  blacklist = WhatsUp::MethodFinder.class_variable_get("@@blacklist")
+  # Fix object_oculus for rails console
+  blacklist = ObjectOculus::MethodFinder.class_variable_get("@@blacklist")
   blacklist += Object.instance_methods
-  WhatsUp::MethodFinder.class_variable_set("@@blacklist", blacklist)
+  ObjectOculus::MethodFinder.class_variable_set("@@blacklist", blacklist)
 end
 
 load(:rails) do
