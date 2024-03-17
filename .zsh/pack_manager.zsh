@@ -11,7 +11,7 @@ export PM_ENABLE_BOOTSNAP=true
 export PM_SILENCE_CONSOLE_HINTS=false
 
 # Disable background tasks
-export PM_EXECUTE_BACKGROUND_TASKS_IMMEDIATELY=true
+# export PM_EXECUTE_BACKGROUND_TASKS_IMMEDIATELY=true
 export PM_SILENCE_RESQUE_LOGGING=true
 
 # Foreman sometimes fails to start
