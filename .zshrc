@@ -3,7 +3,7 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 DISABLE_UPDATE_PROMPT=true
-plugins=(bundler chruby git gitfast history nulogy ruby sublime timer $plugins)
+plugins=(bundler chruby git gitfast history nulogy nvm ruby sublime timer $plugins)
 # plugins=(brew gem kubectl macos rake wd $plugins)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -32,10 +32,6 @@ export CDPATH=~/src:$CDPATH
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
 # zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
