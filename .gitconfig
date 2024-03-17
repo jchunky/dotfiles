@@ -42,3 +42,5 @@
 	autoUpdate = true
 [user]
   name = Chunky
+[maintenance]
+	repo = /Users/jasonc/src/packmanager
