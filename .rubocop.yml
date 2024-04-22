@@ -55,6 +55,18 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
+# Useless ruby sugar
+Naming/BlockForwarding:
+  EnforcedStyle: explicit
+Style/ArgumentsForwarding:
+  UseAnonymousForwarding: false
+Style/EndlessMethod:
+  EnforcedStyle: disallow
+Style/NumberedParameters:
+  EnforcedStyle: disallow
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
+
 # Disable annoyances
 Layout/LineLength:
   Enabled: false
