@@ -5,9 +5,6 @@ source ~/.zshrc
 echo "\nTerminating packmanager..."
 pm_kill
 
-echo "\nDisabling jamf..."
-disable_jamf
-
 echo "\nDisabling apps with browser integration..."
 disable_apps
 

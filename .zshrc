@@ -4,7 +4,6 @@ export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 DISABLE_UPDATE_PROMPT=true
 plugins=(bundler chruby git gitfast history nulogy nvm ruby sublime timer $plugins)
-# plugins=(brew gem kubectl macos rake wd $plugins)
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 setopt hist_find_no_dups
@@ -49,8 +48,7 @@ alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
 alias cop='rubocop -A'
 alias dco='docker-compose'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
-alias disable_apps='p1; sudo chmod a-x "/Applications/1Password 7.app"; sudo chmod a-x "/Applications/Slack.app"'
-alias disable_jamf='p1; sudo chmod a-x "/Applications/Jamf Connect.app"; sudo chmod a-x "/Applications/Jamf Trust.app"; sudo chmod a-x "/Applications/JamfProtect.app"; sudo chmod a-x "/Library/Application Support/JAMF/Jamf.app"; sudo chmod a-x "/usr/local/jamf/bin/jamf"'
+alias disable_apps='p1; sudo chmod a-x "/Applications/1Password.app"; sudo chmod a-x "/Applications/Slack.app"'
 alias flush_dns_cache='p1; sudo killall -HUP mDNSResponder'
 alias gem_update='gem_update_system; gem_install; gem_update_gems'
 alias gem_update_system='gem update --system --silent'
