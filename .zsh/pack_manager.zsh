@@ -44,6 +44,7 @@ alias pm_kill='pmkill; pkill -9 -i -f nginx; pkill -9 -i -f unicorn; pkill -9 -i
 alias pm_merge='thor nugit:integrate'
 alias pm_reset='bundle; rails db:reset; pmu; pm_user'
 alias pm_schema_update='rake ndp:update'
+alias pm_seed_automated_production_entry='pm_seed_dane_post'
 alias pm_seed_candy_pack='rake nulogy:tdc:candy_pack:schedule:fs_variety_mix'
 alias pm_seed_choco_pack='rake nulogy:tdc:choco_pack:schedule:fs_variety_mix'
 alias pm_seed_dane_post='rake nulogy:tdc:dane_post:schedule:fs_variety_mix'
