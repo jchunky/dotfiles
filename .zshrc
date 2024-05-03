@@ -59,7 +59,6 @@ alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
 alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
-alias kill_jamf='p1; sudo watch -n 0.1 pkill -9 -i jamf'
 alias meld="open -W -a Meld $@"
 alias minep='mine ~/root/projects'
 alias permit='xattr -d com.apple.quarantine'
