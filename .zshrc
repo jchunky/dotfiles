@@ -2,8 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-DISABLE_UPDATE_PROMPT=true
 plugins=(bundler chruby git gitfast history nulogy nvm ruby sublime timer $plugins)
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' verbose silent
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 setopt hist_find_no_dups
