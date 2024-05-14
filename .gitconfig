@@ -1,5 +1,5 @@
 [branch]
-  autosetupmerge = true
+  # autosetupmerge = true
   sort = committerdate
 [color]
   branch = auto
@@ -39,7 +39,7 @@
 [remote]
   pushdefault = origin
 [rerere]
-	autoUpdate = true
+	# autoUpdate = true
 [user]
   name = Chunky
 [maintenance]
