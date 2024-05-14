@@ -31,13 +31,17 @@ export CDPATH=~/src:$CDPATH
 
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+eval "$(/usr/local/bin/brew shellenv)"
+
+# chruby
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
 # zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-you-should-use
-source /usr/local/share/zsh-you-should-use/you-should-use.plugin.zsh
+source $HOMEBREW_PREFIX/share/zsh-you-should-use/you-should-use.plugin.zsh
 
 # aliases
 alias a='alias | grep -i'
@@ -101,7 +105,7 @@ function stop_spring {
   bundle exec rails tmp:clear
 }
 function update_homebrew {
-  rm -rf /usr/local/var/homebrew/locks
+  rm -rf $HOMEBREW_PREFIX/var/homebrew/locks
   brew cleanup -q
   brewdump
   brew update -q
