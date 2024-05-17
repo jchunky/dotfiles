@@ -33,10 +33,6 @@ export CDPATH=~/src:$CDPATH
 export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/usr/local/bin/brew shellenv)"
 
-# chruby
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
-
 # zsh-autosuggestions
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
