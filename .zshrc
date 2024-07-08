@@ -76,6 +76,7 @@ alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dot
 alias stp='subl ~/root/projects'
 alias trello=nutrella
 alias update_pgadmin='brew install --cask --force pgadmin4'
+alias update_rubymine='brew install rubymine'
 
 ##
 # gh setup reference:
