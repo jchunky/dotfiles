@@ -21,6 +21,11 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # Silence thor deprecation warnings when running rake tasks
 export THOR_SILENCE_DEPRECATION=true
 
+# Message bus
+export PM_CLUSTER_NAME=development
+export PRODUCTION_SCHEDULING_MESSAGE_BUS_PREFIX=jasonc
+export PATH=$PATH:$HOME/src/platform-team-tools/bin
+
 alias bg1='be rake resque:scheduler'
 alias bg2='QUEUE=* bundle exec rake resque:work'
 alias fr='pm_kill; foreman start'
