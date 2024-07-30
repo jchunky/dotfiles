@@ -25,16 +25,15 @@ export THOR_SILENCE_DEPRECATION=true
 export PATH=$PATH:$HOME/src/platform-team-tools/bin
 export PM_CLUSTER_NAME=development
 export PM_DEV_PS_MESSAGE_BUS_PREFIX=jasonc
-export PRODUCTION_SCHEDULING_MESSAGE_BUS_PREFIX=jasonc
 
 alias bg1='be rake resque:scheduler'
 alias bg2='QUEUE=* bundle exec rake resque:work'
-alias fr='pm_kill; foreman start'
+alias fr='bundle exec overmind start'
 alias frs='pm_kill; rails s'
-alias fra='pm_kill; foreman start -f Procfile.all'
-alias frmrp='pm_kill; foreman start -f Procfile.mrp'
-alias frn='pm_kill; RAILS_NEXT=true foreman start'
-alias fran='pm_kill; RAILS_NEXT=true foreman start -f Procfile.all'
+alias fra='bundle exec overmind start -f Procfile.all'
+alias frmrp='bundle exec overmind start -f Procfile.mrp'
+alias frn='RAILS_NEXT=true bundle exec overmind start'
+alias fran='RAILS_NEXT=true bundle exec overmind start -f Procfile.all'
 alias i18n='bundle exec rake i18n:js:extract'
 alias jstest='npm test'
 alias ks='kill_all_phantomjs; n karma start --browsers=PhantomJS'

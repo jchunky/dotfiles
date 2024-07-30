@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source /opt/homebrew/share/chruby/chruby.sh
+source /opt/homebrew/share/chruby/auto.sh
 
 bundle exec rubocop -A --force-exclusion --server "$@"

@@ -27,7 +27,7 @@ echo "\nUpdating dev-toolbox..."
 cd ~/root/third_party/dev-toolbox && git pull --quiet
 
 echo "\nUpdating oh-my-zsh-plugins..."
-cd ~/root/third_party/oh-my-zsh-plugins && git pull --quiet
+cd ~/.oh-my-zsh-custom && git pull --quiet
 
 echo "\nDeleting stale branches of production-scheduling..."
 cd ~/src/production-scheduling && git fetch -p --quiet && delete_stale_branches

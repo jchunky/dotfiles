@@ -41,6 +41,6 @@
 [rerere]
 	# autoUpdate = true
 [user]
-  name = Chunky
+	name = Jason CheongKeeYou
 [maintenance]
 	repo = /Users/jasonc/src/packmanager
