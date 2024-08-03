@@ -1,4 +1,4 @@
-# .env
+# https://github.com/nulogy/PackManager/blob/main/.env.sample - Sep 19, 2022
 export QUEUE=*
 export NGINX_PORT=3000
 export UNICORN_PORT=5555
