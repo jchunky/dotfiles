@@ -62,6 +62,7 @@ alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
 alias meld="open -W -a Meld $@"
 alias minep='mine ~/root/projects'
+alias mb='mine_branch'
 alias permit='xattr -d com.apple.quarantine'
 alias permit_chromedriver='xattr -d com.apple.quarantine $(which chromedriver) > /dev/null 2>&1'
 alias py='python'
@@ -95,6 +96,9 @@ alias gdw='git diff -b --word-diff'
 # functions
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
 function merge_files { awk 'FNR==1{print ""}1' $@ }
+function mine_branch() {
+  /Applications/RubyMine.app/Contents/MacOS/rubymine `git diff --name-only --diff-filter=d main` &>/dev/null
+}
 function ruby_use { chruby `cat .ruby-version` }
 function stop_spring {
   bundle --quiet
