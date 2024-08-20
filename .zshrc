@@ -97,7 +97,7 @@ alias gdw='git diff -b --word-diff'
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
 function merge_files { awk 'FNR==1{print ""}1' $@ }
 function mine_branch() {
-  /Applications/RubyMine.app/Contents/MacOS/rubymine `git diff --name-only --diff-filter=d main` &>/dev/null
+  /Applications/RubyMine.app/Contents/MacOS/rubymine `git diff --name-only --diff-filter=d $(git merge-base main $(git rev-parse --abbrev-ref HEAD))` &>/dev/null
 }
 function ruby_use { chruby `cat .ruby-version` }
 function stop_spring {
