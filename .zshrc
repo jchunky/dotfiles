@@ -88,10 +88,12 @@ alias vwpr='mkpr; gh pr view --web'
 
 # git
 alias gd='git diff -b'
+alias gd_root='gd $(git merge-base main $(git rev-parse --abbrev-ref HEAD))'
 alias gdca='git diff -b --cached'
 alias gdcw='git diff -b --cached --word-diff'
 alias gds='git diff -b --staged'
 alias gdw='git diff -b --word-diff'
+alias grbi_root='grbi $(git merge-base main $(git rev-parse --abbrev-ref HEAD))'
 
 # functions
 function brupdate { brew update; brew upgrade; brew cleanup; brew doctor; }
