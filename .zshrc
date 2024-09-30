@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-plugins=(brew bundler chruby git gitfast history nulogy nvm ruby sublime timer $plugins)
+plugins=(brew bundler git gitfast history nulogy nvm ruby sublime timer $plugins)
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' verbose silent
 source $ZSH/oh-my-zsh.sh
@@ -28,6 +28,10 @@ export CDPATH=~/root/projects:$CDPATH
 export CDPATH=~/root:$CDPATH
 export CDPATH=~/src/production-scheduling:$CDPATH
 export CDPATH=~/src:$CDPATH
+
+# chruby
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
