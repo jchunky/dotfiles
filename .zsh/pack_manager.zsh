@@ -3,9 +3,10 @@ export QUEUE=*
 export NGINX_PORT=3000
 export UNICORN_PORT=5555
 
-# https://github.com/nulogy/packManager/blob/main/development.env.sample - Jul 17, 2024
+# https://github.com/nulogy/packManager/blob/main/development.env.sample - 2024-09-28
 export PM_DEV_CAPYBARA_MAX_WAIT_TIME_IN_SECONDS=600
 export PM_DEV_ENABLE_BOOTSNAP=true
+# export PM_DEV_ENABLE_PRY=true
 export PM_DEV_EXCEPTION_NOTIFIER_FAIL_FAST=true
 # export PM_DEV_EXECUTE_BACKGROUND_TASKS_IMMEDIATELY=true
 export PM_DEV_PERFORM_BACKGROUND_TASKS_INLINE=true
