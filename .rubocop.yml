@@ -4,22 +4,26 @@ AllCops:
   SuggestExtensions: false
 
 # Miscelleneous
+Layout/ClassStructure:
+  Enabled: true
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/HeredocArgumentClosingParenthesis:
   Enabled: true
-Style/BlockDelimiters:
-  EnforcedStyle: braces_for_chaining
 Style/CollectionMethods:
   Enabled: true
+
+# RSpec
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
+# Refactoring
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
-# Auto-correct
-Layout/DefEndAlignment:
-  AutoCorrect: true
-Layout/EndAlignment:
-  AutoCorrect: true
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
 
 # Indentation
 Layout/BlockAlignment:
@@ -50,30 +54,14 @@ Layout/MultilineHashKeyLineBreaks:
   Enabled: true
 Layout/MultilineMethodArgumentLineBreaks:
   Enabled: true
-
-# Trailing commas
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: comma
-Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: comma
-
-# Useless ruby sugar
-Naming/BlockForwarding:
-  EnforcedStyle: explicit
-Style/ArgumentsForwarding:
-  UseAnonymousForwarding: false
-Style/EndlessMethod:
-  EnforcedStyle: disallow
-Style/NumberedParameters:
-  EnforcedStyle: disallow
-Style/HashSyntax:
-  EnforcedShorthandSyntax: never
+Layout/MultilineMethodParameterLineBreaks:
+  Enabled: true
 
 # Disable annoyances
 Layout/LineLength:
   Enabled: false
 Lint/UnusedMethodArgument:
-  AutoCorrect: false
+  Enabled: false
 Lint/UselessAccessModifier:
   Enabled: false
 Lint/UselessAssignment:
@@ -118,22 +106,3 @@ Style/SoleNestedConditional:
   Enabled: false
 Style/StructInheritance:
   Enabled: false
-
-# Class structure
-Layout/ClassStructure:
-  Enabled: true
-  AutoCorrect: true
-  ExpectedOrder:
-    - module_inclusion
-    - constants
-    - attr_accessor
-    - attr_reader
-    - attr_writer
-    - delegate
-    - public_class_methods
-    - initializer
-    - public_methods
-    - protected_class_methods
-    - protected_methods
-    - private_class_methods
-    - private_methods
