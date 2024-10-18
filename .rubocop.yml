@@ -112,6 +112,8 @@ Style/ParallelAssignment:
   Enabled: false
 Style/RescueModifier:
   Enabled: false
+Style/SingleLineDoEndBlock:
+  Enabled: false
 Style/SoleNestedConditional:
   Enabled: false
 Style/StructInheritance:
