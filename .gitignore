@@ -1,6 +1,14 @@
 *.log
 *.mjs
+.bundle
+.config
 .DS_Store
 .exercism
+.gem
+.git
+.guard_history
 .idea
+.local
+.node-gyp
+.rspec_status
 node_modules
