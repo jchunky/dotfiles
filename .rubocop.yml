@@ -1,7 +1,6 @@
 # New cops
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.3
   SuggestExtensions: false
 
 # Miscelleneous
@@ -29,28 +28,14 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
-# Indentation
-Layout/BlockAlignment:
-  EnforcedStyleAlignWith: start_of_block
-Layout/FirstArgumentIndentation:
-  EnforcedStyle: consistent
-Layout/FirstArrayElementIndentation:
-  EnforcedStyle: consistent
-Layout/FirstHashElementIndentation:
-  EnforcedStyle: consistent
-Layout/FirstParameterIndentation:
-  EnforcedStyle: consistent
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-Layout/ParameterAlignment:
-  EnforcedStyle: with_fixed_indentation
-
 # Line breaks
 Layout/FirstArrayElementLineBreak:
   Enabled: true
 Layout/FirstHashElementLineBreak:
   Enabled: true
 Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+Layout/FirstMethodParameterLineBreak:
   Enabled: true
 Layout/MultilineArrayLineBreaks:
   Enabled: true
@@ -61,9 +46,7 @@ Layout/MultilineMethodArgumentLineBreaks:
 Layout/MultilineMethodParameterLineBreaks:
   Enabled: true
 
-# Disable annoyances
-Layout/LineLength:
-  Enabled: false
+# Katas
 Lint/UnusedMethodArgument:
   Enabled: false
 Lint/UselessAccessModifier:
@@ -72,25 +55,33 @@ Lint/UselessAssignment:
   Enabled: false
 Lint/UselessTimes:
   Enabled: false
-Metrics:
-  Enabled: false
-Naming/MethodParameterName:
-  Enabled: false
-Style/Documentation:
-  Enabled: false
 Style/EmptyCaseCondition:
   Enabled: false
 Style/EmptyMethod:
-  Enabled: false
-Style/FormatStringToken:
-  Enabled: false
-Style/FrozenStringLiteralComment:
   Enabled: false
 Style/GuardClause:
   Enabled: false
 Style/IdenticalConditionalBranches:
   Enabled: false
 Style/IfUnlessModifier:
+  Enabled: false
+# Style/SingleLineDoEndBlock:
+#   Enabled: false
+Style/SoleNestedConditional:
+  Enabled: false
+
+# Disable annoyances
+Layout/LineLength:
+  Enabled: false
+Metrics:
+  Enabled: false
+Naming:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/FormatStringToken:
+  Enabled: false
+Style/FrozenStringLiteralComment:
   Enabled: false
 Style/ModuleFunction:
   Enabled: false
@@ -100,13 +91,7 @@ Style/NumericLiterals:
   Enabled: false
 Style/NumericPredicate:
   Enabled: false
-Style/ParallelAssignment:
-  Enabled: false
 Style/RescueModifier:
-  Enabled: false
-Style/SingleLineDoEndBlock:
-  Enabled: false
-Style/SoleNestedConditional:
   Enabled: false
 Style/StructInheritance:
   Enabled: false
