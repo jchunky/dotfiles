@@ -1,6 +1,7 @@
 # New cops
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 3.3
   SuggestExtensions: false
 
 # Miscelleneous
@@ -16,6 +17,9 @@ Style/CollectionMethods:
 # RSpec
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
+Style/OpenStructUse:
+  Exclude:
+    - '**/*_spec.rb'
 
 # Refactoring
 Style/StringLiterals:
