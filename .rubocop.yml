@@ -2,6 +2,8 @@
 AllCops:
   NewCops: enable
   SuggestExtensions: false
+  Exclude:
+    - '**/gilded_rose_old.rb'
 
 # Miscelleneous
 Layout/ClassStructure:
@@ -48,27 +50,25 @@ Layout/MultilineMethodParameterLineBreaks:
 
 # Katas
 Lint/UnusedMethodArgument:
-  Enabled: false
+  AutoCorrect: false
 Lint/UselessAccessModifier:
-  Enabled: false
+  AutoCorrect: false
 Lint/UselessAssignment:
-  Enabled: false
+  AutoCorrect: false
 Lint/UselessTimes:
-  Enabled: false
-Style/EmptyCaseCondition:
-  Enabled: false
+  AutoCorrect: false
 Style/EmptyMethod:
-  Enabled: false
+  AutoCorrect: false
 Style/GuardClause:
-  Enabled: false
+  AutoCorrect: false
 Style/IdenticalConditionalBranches:
-  Enabled: false
+  AutoCorrect: false
 Style/IfUnlessModifier:
-  Enabled: false
-# Style/SingleLineDoEndBlock:
-#   Enabled: false
+  AutoCorrect: false
+Style/SingleLineDoEndBlock:
+  AutoCorrect: false
 Style/SoleNestedConditional:
-  Enabled: false
+  AutoCorrect: false
 
 # Disable annoyances
 Layout/LineLength:
@@ -78,6 +78,8 @@ Metrics:
 Naming:
   Enabled: false
 Style/Documentation:
+  Enabled: false
+Style/EmptyCaseCondition:
   Enabled: false
 Style/FormatStringToken:
   Enabled: false
