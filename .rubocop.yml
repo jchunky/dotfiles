@@ -1,3 +1,7 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
 # New cops
 AllCops:
   NewCops: enable
@@ -92,6 +96,10 @@ Layout/LineLength:
 Metrics:
   Enabled: false
 Naming:
+  Enabled: false
+Rails/Output:
+  Enabled: false
+Rails/TimeZone:
   Enabled: false
 Style/Documentation:
   Enabled: false
