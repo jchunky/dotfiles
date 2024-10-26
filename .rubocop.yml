@@ -30,6 +30,22 @@ Style/TrailingCommaInArrayLiteral:
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
+# Indentation
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+Layout/FirstParameterIndentation:
+  EnforcedStyle: consistent
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
 # Line breaks
 Layout/FirstArrayElementLineBreak:
   Enabled: true
