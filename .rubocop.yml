@@ -25,6 +25,7 @@ Style/BlockDelimiters:
 Style/OpenStructUse:
   Exclude:
     - '**/*_spec.rb'
+    - '**/*_test.rb'
 
 # Refactoring
 Style/StringLiterals:
@@ -102,6 +103,8 @@ Rails/Output:
 Rails/Date:
   Enabled: false
 Rails/TimeZone:
+  Enabled: false
+Style/CombinableLoops:
   Enabled: false
 Style/Documentation:
   Enabled: false
