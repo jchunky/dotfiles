@@ -30,6 +30,8 @@ Style/OpenStructUse:
 # Refactoring
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
 Style/TrailingCommaInHashLiteral:
@@ -113,6 +115,8 @@ Style/EmptyCaseCondition:
 Style/FormatStringToken:
   Enabled: false
 Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/MissingRespondToMissing:
   Enabled: false
 Style/ModuleFunction:
   Enabled: false
