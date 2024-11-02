@@ -16,6 +16,8 @@ run_cmd =
     abort "No matching files to execute"
   end
 
-full_cmd = "ag -g '\\.rb$' | entr -c -d -p -s 'rubocop -A; clear; #{run_cmd}'"
+clear_screen = 'printf "\033[2J\033[H"'
+
+full_cmd = %(ag -g '\\.rb$' | entr -c -d -p -s 'clear; rubocop -A; #{clear_screen}; #{run_cmd}')
 
 system full_cmd
