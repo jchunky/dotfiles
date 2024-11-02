@@ -72,6 +72,8 @@ Layout/MultilineMethodParameterLineBreaks:
   Enabled: true
 
 # Katas
+Lint/UnusedBlockArgument:
+  AutoCorrect: false
 Lint/UnusedMethodArgument:
   AutoCorrect: false
 Lint/UselessAccessModifier:
@@ -83,6 +85,8 @@ Lint/UselessTimes:
 Style/EmptyMethod:
   AutoCorrect: false
 Style/GuardClause:
+  AutoCorrect: false
+Style/HashEachMethods:
   AutoCorrect: false
 Style/IdenticalConditionalBranches:
   AutoCorrect: false
