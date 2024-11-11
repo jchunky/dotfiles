@@ -2,16 +2,12 @@
 
 if [ $# -eq 0 ]; then
     cat <<HELP
-      NAME
-           war (Watch And Run)
+war (Watch And Run)
 
-      SYNOPSIS
-           Automatically run a specified rspec file when a matching ruby file has changed.
+Automatically run a specified rspec file when a matching ruby file has changed.
 
-      EXAMPLE
-           Run work_order_dates_spec.rb whenever any ruby file containing 'work_order_dates' in the name is modified:
-
-                war ".*work_order_dates.*.rb" "spring rspec spec/models/packmanager/work_order_dates_spec.rb"
+- Run 'rspec' whenever any ruby file containing 'user' in the name is modified:
+    war ".*user.*.rb" "rspec"
 HELP
     exit 1
 fi
