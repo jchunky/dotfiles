@@ -6,7 +6,7 @@ export PS_DEV_FILTER_GEMS_FROM_BACKTRACE=true
 export PS_DEV_SUPPRESS_RSPEC_FAILURE_DUMP=true
 
 alias ps_cop='bundle exec rubocop -A'
-alias ps_e2e='PORT=3031 REACT_APP_E2E_TEST_MODE="local" yarn run install-and-start'
+alias ps_e2e='PORT=3031 VITE_APP_E2E_TEST_MODE="local" yarn run install-and-start'
 alias ps_test='rake test:rspec'
 
 function ps_reset {
