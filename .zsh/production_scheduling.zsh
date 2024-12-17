@@ -16,7 +16,6 @@ function ps_reset {
   cd ~/src/production-scheduling/backend
   chruby `cat .ruby-version`
   bundle
-  bundle exec spring stop
   bundle exec rake db:reset
   bundle exec rake dev:reset_seed
   cd ..
@@ -29,7 +28,6 @@ function ps_update {
   cd ~/src/production-scheduling/backend
   chruby `cat .ruby-version`
   bundle
-  bundle exec spring stop
   bundle exec rake db:migrate db:test:prepare
   cd ..
 }
