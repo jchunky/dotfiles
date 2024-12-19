@@ -37,6 +37,9 @@ source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# screencapture-nag-remover
+export PATH=$PATH:~/src/screencapture-nag-remover
+
 # zsh-autosuggestions
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
