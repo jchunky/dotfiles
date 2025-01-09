@@ -19,15 +19,16 @@ export EDITOR='subl -w'
 export PATH=.:./bin:~/.bin:~/bin:~/root/projects/private/.bin:$PATH
 
 # cdpath
+export CDPATH=~:$CDPATH
+export CDPATH=~/src:$CDPATH
+export CDPATH=~/src/production-scheduling:$CDPATH
+export CDPATH=~/root:$CDPATH
 export CDPATH=~/root/projects/apps:$CDPATH
 export CDPATH=~/root/projects/dotfiles/.bin:$CDPATH
 export CDPATH=~/root/projects/exercism/ruby:$CDPATH
 export CDPATH=~/root/projects/katas:$CDPATH
 export CDPATH=~/root/projects/others:$CDPATH
 export CDPATH=~/root/projects:$CDPATH
-export CDPATH=~/root:$CDPATH
-export CDPATH=~/src/production-scheduling:$CDPATH
-export CDPATH=~/src:$CDPATH
 
 # chruby
 source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
