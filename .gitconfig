@@ -5,8 +5,6 @@
   branch = auto
   diff = auto
   ui = true
-[commit]
-  template = ~/.stCommitMsg
 [core]
   attributesfile = ~/.gitattributes
   commentchar = $
