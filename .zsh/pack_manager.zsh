@@ -9,7 +9,7 @@ export PM_DEV_ENABLE_BOOTSNAP=true
 # export PM_DEV_ENABLE_PRY=true
 export PM_DEV_EXCEPTION_NOTIFIER_FAIL_FAST=true
 # export PM_DEV_EXECUTE_BACKGROUND_TASKS_IMMEDIATELY=true
-export PM_DEV_PERFORM_BACKGROUND_TASKS_INLINE=true
+# export PM_DEV_PERFORM_BACKGROUND_TASKS_INLINE=true
 export PM_DEV_POLLING_INTERVAL_IN_SECONDS=600
 export PM_DEV_REQUEST_TIMEOUT_IN_MINUTES=10
 export PM_DEV_SHOW_LOCAL_DEVELOPMENT_INFO=true
@@ -61,7 +61,7 @@ alias pm_seed_candy_pack='rake nulogy:tdc:candy_pack:schedule:fs_variety_mix'
 alias pm_seed_choco_pack='rake nulogy:tdc:choco_pack:schedule:fs_variety_mix'
 alias pm_seed_dane_post='rake nulogy:tdc:dane_post:schedule:fs_variety_mix'
 alias pm_seed_jit='pm_seed_choco_pack'
-alias pm_update='bundle; pmu; RAILS_ENV=test rails db:seed:replant'
+alias pm_update='bundle; pmu; RAILS_ENV=test rails db:test:prepare db:seed:replant'
 alias rn='RAILS_NEXT=true '
 alias seed_work_orders='rails runner development/scripts/seed_scripts/seed_work_orders.rb'
 
