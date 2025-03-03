@@ -5,6 +5,8 @@
   branch = auto
   diff = auto
   ui = true
+[commit]
+  verbose = true
 [core]
   attributesfile = ~/.gitattributes
   commentchar = $
@@ -12,8 +14,14 @@
   hooksPath = ~/.git-templates/hooks
   pager = tr -d '\\r' | less -REX
 [diff]
-	algorithm = histogram
-  colorMoved = default
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
+[fetch]
+  all = true
+  prune = true
+  pruneTags = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   process = git-lfs filter-process
@@ -29,7 +37,8 @@
   rebase = true
 [push]
   autoSetupRemote = true
-  default = current
+  default = simple
+  followTags = true
 [rebase]
 	updateRefs = true
 [remote "origin"]
