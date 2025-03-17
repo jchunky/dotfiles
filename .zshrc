@@ -38,6 +38,11 @@ source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# ncurses
+export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ncurses/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ncurses/include"
+
 # screencapture-nag-remover
 export PATH=$PATH:~/src/screencapture-nag-remover
 
