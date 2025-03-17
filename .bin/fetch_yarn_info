@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+# Ensure jq is installed
+if ! command -v jq &> /dev/null; then
+  echo "jq is required but not installed. Please install jq and try again."
+  exit 1
+fi
+
+# Ensure yarn is installed
+if ! command -v yarn &> /dev/null; then
+  echo "yarn is required but not installed. Please install yarn and try again."
+  exit 1
+fi
+
+# Parse package.json and get all dependencies
+dependencies=$(jq -r '.dependencies | keys[]' package.json)
+devDependencies=$(jq -r '.devDependencies | keys[]' package.json)
+
+# Combine dependencies and devDependencies
+allDependencies=("${(@f)dependencies}" "${(@f)devDependencies}")
+
+# Run yarn info for each dependency
+for dep in $allDependencies; do
+  echo "Fetching info for $dep..."
+  yarn info $dep version
+done
