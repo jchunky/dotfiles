@@ -15,7 +15,7 @@ setopt pushdsilent
 
 # exports
 export BASH_ENV="~/.bashrc"
-export EDITOR='subl -w'
+export EDITOR='cursor -w'
 export PATH=.:./bin:~/.bin:~/bin:~/root/projects/private/.bin:$PATH
 
 # cdpath
