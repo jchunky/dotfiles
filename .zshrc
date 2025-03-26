@@ -59,6 +59,7 @@ alias brewdump='pushd ~/root/projects/dotfiles && brew bundle dump --force && po
 alias bundle_update='bundle update --bundler --quiet'
 alias cheat='cat ~/root/projects/private/work/cheat.txt'
 alias chrspec='CAPYBARA_DRIVER=chrome bundle exec rspec'
+alias code='cursor'
 alias cop='rubocop -A'
 alias dco='docker-compose'
 alias delete_local_branches='git branch | grep -v \* | xargs git branch -D'
@@ -88,7 +89,7 @@ alias sp='open -n -a "Google Chrome" --args "https://jamboard.google.com/d/15l8z
 alias src='source ~/.zshrc'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
-alias stp='subl ~/root/projects'
+alias stp='code ~/root/projects'
 alias trello=nutrella
 alias update_pgadmin='brew install --cask --force pgadmin4'
 alias update_rubymine='brew install rubymine'
