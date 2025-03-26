@@ -98,8 +98,8 @@ alias update_rubymine='brew install rubymine'
 # gh setup reference:
 # https://github.com/jchunky/notes/wiki/Create-alias-for-making-pull-requests
 #
-alias mkpr='gh pr create -f --body ""'
-alias vwpr='mkpr; gh pr view --web'
+alias mkpr='vwpr'
+alias vwpr='gh pr view --web > /dev/null 2>&1 || gh pr create -f --body ""'
 
 # git
 alias gd='git diff -b'
