@@ -1,0 +1,36 @@
+#!/usr/bin/env ruby
+
+require 'find'
+
+def count_lines_in_dir(dir)
+  return 0 unless Dir.exist?(dir)
+
+  Dir.glob(File.join(dir, '**', '*.rb')).reject { |file| file.match?(/_test\.rb$|_spec\.rb$/) }.sum do |file|
+    File.readlines(file).count
+  rescue StandardError
+    0
+  end
+end
+
+if ARGV.empty?
+  puts "Usage: #{$PROGRAM_NAME} <directory>"
+  exit 1
+end
+
+root_dir = File.expand_path(ARGV[0])
+unless Dir.exist?(root_dir)
+  puts "Error: Directory not found - #{root_dir}"
+  exit 1
+end
+
+subdirs = Dir.entries(root_dir).select { |e| File.directory?(File.join(root_dir, e)) && !e.start_with?('.') }
+
+results = subdirs.map do |subdir|
+  path = File.join(root_dir, subdir)
+  [subdir, count_lines_in_dir(path)]
+end
+
+results.sort_by! { |_, lines| -lines }
+
+puts "Ruby LOC per subdirectory in #{root_dir}:"
+results.each { |subdir, lines| puts "#{subdir}: #{lines} lines" }
