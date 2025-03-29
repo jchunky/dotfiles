@@ -2,22 +2,22 @@
 
 run_cmd =
   case
-  when Dir.glob('test/*_test.rb').any?
-    'ruby test/*_test.rb'
-  when Dir.glob('*_test.rb').any?
-    'ruby *_test.rb'
-  when Dir.glob('**/*_spec.rb').any?
-    'rspec .'
-  when File.exist?('main.rb')
-    'ruby main.rb'
-  when File.exist?('scrap.rb')
-    'ruby scrap.rb'
+  when Dir.glob("test/*_test.rb").any?
+    "ruby test/*_test.rb"
+  when Dir.glob("*_test.rb").any?
+    "ruby *_test.rb"
+  when Dir.glob("**/*_spec.rb").any?
+    "rspec ."
+  when File.exist?("main.rb")
+    "ruby main.rb"
+  when File.exist?("scrap.rb")
+    "ruby scrap.rb"
   else
     abort "No matching files to execute"
   end
 
 clear_screen = 'printf "\033[2J\033[H"'
 
-full_cmd = %(ag -g '\\.rb$' | entr -c -d -p -s 'clear; rubocop -A; #{clear_screen}; #{run_cmd}')
+full_cmd = %(ag -g '\\.rb$' | entr -c -d -p -s 'clear; #{clear_screen}; #{run_cmd}')
 
 system full_cmd

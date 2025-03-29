@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-plugins=(brew bundler git gitfast history nulogy nvm ruby sublime timer $plugins)
+plugins=(brew bundler git gitfast history nulogy nvm ruby timer $plugins)
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' verbose silent
 source $ZSH/oh-my-zsh.sh
@@ -87,6 +87,7 @@ alias seed_run='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/r
 alias seed_run_cop='curl https://raw.githubusercontent.com/nulogy/how-to-code/main/run_cop -o ./run; chmod a+x ./run'
 alias sp='open -n -a "Google Chrome" --args "https://jamboard.google.com/d/15l8zMMOTIQc5iVgxQ4_7Krn_3F0SK8bDRukbzo7HdW8/viewer?f=0"'
 alias src='source ~/.zshrc'
+alias st='code'
 alias stow_dotfiles='stow --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stow_dotfiles_delete='stow -D --dir=$HOME/root/projects --target=$HOME dotfiles'
 alias stp='code ~/root/projects'
