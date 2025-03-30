@@ -13,6 +13,8 @@
   excludesfile = ~/.gitignore
   hooksPath = ~/.git-templates/hooks
   pager = tr -d '\\r' | less -REX
+	autocrlf = false
+	eol = lf
 [diff]
   algorithm = histogram
   colorMoved = plain
