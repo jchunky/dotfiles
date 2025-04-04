@@ -28,6 +28,7 @@
 		".idea",
 		".svn",
 		".tmp",
+    ".vscode",
 		".zeus.sock",
 		"__MACOSX",
 		"bower_components",
