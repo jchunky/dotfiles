@@ -26,7 +26,8 @@ brew "nginx"
 brew "nvm"
 brew "openssl@1.1"
 brew "pcre"
-brew "postgresql@14"
+brew "postgresql@14", link: false
+brew "postgresql@15", link: true
 brew "ruby-install"
 brew "shared-mime-info"
 brew "sops"
