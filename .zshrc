@@ -43,6 +43,11 @@ export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/ncurses/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ncurses/include"
 
+# openssl (for building rdkafka gem in PS for the message-bus consumer)
+export LDFLAGS="-L$(brew --prefix openssl@3)/lib $LDFLAGS"
+export CPPFLAGS="-I$(brew --prefix openssl@3)/include $CPPFLAGS"
+export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
+
 # screencapture-nag-remover
 export PATH=$PATH:~/src/screencapture-nag-remover
 
