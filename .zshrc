@@ -30,13 +30,13 @@ export CDPATH=~/root/projects/katas:$CDPATH
 export CDPATH=~/root/projects/others:$CDPATH
 export CDPATH=~/root/projects:$CDPATH
 
-# chruby
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
-
 # homebrew
 export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# chruby (disable for cpi)
+# source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+# source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
 # ncurses
 export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
