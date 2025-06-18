@@ -48,6 +48,9 @@ export LDFLAGS="-L$(brew --prefix openssl@3)/lib $LDFLAGS"
 export CPPFLAGS="-I$(brew --prefix openssl@3)/include $CPPFLAGS"
 export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
 
+# postgresql
+export PATH="$(brew --prefix postgresql@15)/bin:$PATH"
+
 # screencapture-nag-remover
 export PATH=$PATH:~/src/screencapture-nag-remover
 
