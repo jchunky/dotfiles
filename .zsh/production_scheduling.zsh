@@ -26,6 +26,7 @@ function ps_test {
   RAILS_ENV=test be rails db:test:prepare db:seed
   cd backend
   chruby `cat .ruby-version`
+  RAILS_ENV=test be rails db:test:prepare db:seed
   rake test:rspec
 }
 
