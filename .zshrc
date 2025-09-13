@@ -151,3 +151,7 @@ done
 for dotfile in ~/root/projects/private/.zsh/*.zsh; do
   source "$dotfile"
 done
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/jasonc/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
