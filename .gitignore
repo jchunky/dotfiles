@@ -1,5 +1,4 @@
 *.log
-*.mjs
 .bundle
 .config
 .DS_Store
