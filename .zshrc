@@ -35,13 +35,13 @@ export HOMEBREW_NO_ENV_HINTS=true
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # chruby (disable for cpi)
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
-source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
+source $HOMEBREW_PREFIX/share/chruby/chruby.sh
+source $HOMEBREW_PREFIX/share/chruby/auto.sh
 
 # ncurses
-export PATH="/opt/homebrew/opt/ncurses/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/ncurses/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ncurses/include"
+export PATH="$(brew --prefix ncurses)/bin:$PATH"
+export LDFLAGS="-L$(brew --prefix ncurses)/lib"
+export CPPFLAGS="-I$(brew --prefix ncurses)/include"
 
 # openssl (for building rdkafka gem in PS for the message-bus consumer)
 export LDFLAGS="-L$(brew --prefix openssl@3)/lib $LDFLAGS"
