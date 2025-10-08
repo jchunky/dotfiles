@@ -86,3 +86,48 @@ function reset_rails_db_pm {
   be rake db:seed
   be rake db:test:update
 }
+function k_job_env() {
+  local quiet=false
+
+  # Check for --quiet flag
+  if [[ "$1" == "--quiet" ]]; then
+    quiet=true
+    shift
+  fi
+
+  local pod_prefix="$1"
+
+  if [[ -z "$pod_prefix" ]]; then
+    echo "Usage: k_job_env [--quiet] POD_NAME_OR_PREFIX"
+    return 1
+  fi
+
+  # Try to find the pod (exact or prefix)
+  local pod_name
+  pod_name=$(kubectl get pods --no-headers -o custom-columns=":metadata.name" \
+    | grep "^$pod_prefix" \
+    | head -n 1)
+
+  if [[ -z "$pod_name" ]]; then
+    echo "No pod found matching prefix: $pod_prefix"
+    return 1
+  fi
+
+  if $quiet; then
+    # Clipboard only
+    kubectl get pod "$pod_name" -o yaml \
+      | yq ".spec.containers[].env" \
+      | yq eval "del(.[0].RAILS_ENV)" \
+      | yq eval "del(.[0].DEPLOY_ENVIRONMENT)" \
+      | yq eval "del(.[0].PARAMETER_FETCHING)" \
+      | pbcopy
+  else
+    # Console + clipboard
+    kubectl get pod "$pod_name" -o yaml \
+      | yq ".spec.containers[].env" \
+      | yq eval "del(.[0].RAILS_ENV)" \
+      | yq eval "del(.[0].DEPLOY_ENVIRONMENT)" \
+      | yq eval "del(.[0].PARAMETER_FETCHING)" \
+      | tee >(pbcopy)
+  fi
+}
