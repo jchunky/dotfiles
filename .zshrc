@@ -2,7 +2,8 @@
 export ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="robbyrussell"
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-plugins=(brew bundler git gitfast history nulogy nvm ruby sublime timer $plugins)
+BUNDLED_COMMANDS=(overmind rails rake rubocop rspec)
+plugins=(brew bundler git gitfast history kubectl nulogy nvm ruby sublime timer $plugins)
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' verbose silent
 source $ZSH/oh-my-zsh.sh
