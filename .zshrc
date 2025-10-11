@@ -89,7 +89,6 @@ alias gem_update_gems='gem update --silent bundler byebug flog foreman guard int
 alias git_set_head='git remote set-head origin -a'
 alias gitb="git branch | grep '^\*' | cut -d' ' -f2 | pbcopy"
 alias grep='grep -a'
-alias k='kubectl'
 alias kill_chrome='pkill -9 -i chrome'
 alias kill_docker='pkill -9 -i docker'
 alias meld="open -W -a Meld $@"
