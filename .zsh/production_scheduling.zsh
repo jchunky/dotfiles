@@ -33,6 +33,8 @@ function ps_test {
 function ps_update {
   cd ~/src/production-scheduling/frontend
   nvm use
+  npm install -g corepack
+  corepack enable
   yarn install
   cd ~/src/production-scheduling/backend
   chruby `cat .ruby-version`
