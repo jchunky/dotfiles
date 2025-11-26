@@ -1,23 +1,40 @@
 #!/usr/bin/env ruby
 
-run_cmd =
-  case
-  when Dir.glob("test/*_test.rb").any?
-    "ruby test/*_test.rb"
-  when Dir.glob("*_test.rb").any?
-    "ruby *_test.rb"
-  when Dir.glob("**/*_spec.rb").any?
-    "rspec ."
-  when File.exist?("main.rb")
-    "ruby main.rb"
-  when File.exist?("scrap.rb")
-    "ruby scrap.rb"
-  else
-    abort "No matching files to execute"
+class Main
+  def run
+    system full_cmd
   end
 
-clear_screen = 'printf "\033[2J\033[H"'
+  private
 
-full_cmd = %(ag -g '\\.rb$' | entr -c -d -p -s 'clear; #{clear_screen}; #{run_cmd}')
+  def full_cmd
+    %(ag -g '\\.rb$' | entr -c -d -p -s 'clear; #{bundle_exec} #{run_cmd}')
+  end
 
-system full_cmd
+  def bundle_exec
+    "bundle exec" if gemfile_exists?
+  end
+
+  def gemfile_exists?
+    [".", "..", "../.."].any? { File.exist?(_1 + "/Gemfile") }
+  end
+
+  def run_cmd
+    case
+    when Dir.glob("test/*_test.rb").any?
+      "ruby test/*_test.rb"
+    when Dir.glob("*_test.rb").any?
+      "ruby *_test.rb"
+    when Dir.glob("**/*_spec.rb").any?
+      "rspec ."
+    when File.exist?("main.rb")
+      "ruby main.rb"
+    when File.exist?("scrap.rb")
+      "ruby scrap.rb"
+    else
+      abort "No matching files to execute"
+    end
+  end
+end
+
+Main.new.run
