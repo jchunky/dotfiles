@@ -89,6 +89,13 @@ function reset_rails_db_pm {
   be rake db:seed
   be rake db:test:update
 }
+function reset_candy_pack() {
+  spring rails db:reset \
+    nulogy:tdc:candy_pack:schedule:fs_variety_mix \
+    "nulogy:user_management:create_admin[alistairm@nulogy.com,Candy Pack]" \
+    "nulogy:tdc:move_nulogy_user_to_catalog[alistairm@nulogy.com,Candy Pack]"
+  RAILS_ENV=test spring rails db:seed:replant
+}
 function k_job_env() {
   local quiet=false
 
