@@ -13,6 +13,7 @@ export PM_DEV_REQUEST_TIMEOUT_IN_MINUTES=10
 export PM_DEV_SHOW_LOCAL_DEVELOPMENT_INFO=true
 export PM_DEV_SILENCE_RESQUE_LOGGING=true
 export PM_SENTRY_ACTIVE=false
+export RAILS_EDITOR=rubymine
 export UNICORN_WORKER_PROCESSES=2
 
 # Foreman sometimes fails to start
