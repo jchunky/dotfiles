@@ -39,23 +39,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 source $HOMEBREW_PREFIX/share/chruby/chruby.sh
 source $HOMEBREW_PREFIX/share/chruby/auto.sh
 
-# ncurses
-# export PATH="$(brew --prefix ncurses)/bin:$PATH"
-# export LDFLAGS="-L$(brew --prefix ncurses)/lib"
-# export CPPFLAGS="-I$(brew --prefix ncurses)/include"
-
-# openssl (for building rdkafka gem in PS for the message-bus consumer)
-# export LDFLAGS="-L$(brew --prefix openssl@3)/lib $LDFLAGS"
-# export CPPFLAGS="-I$(brew --prefix openssl@3)/include $CPPFLAGS"
-# export PKG_CONFIG_PATH="$(brew --prefix openssl@3)/lib/pkgconfig"
-
-# HACK: Use openssl@3.5 (since 3.6 breaks the ruby ecosystem)
-# export PATH="$(brew --prefix openssl@3.5)/bin:$PATH"
-# export LDFLAGS="-L$(brew --prefix openssl@3.5)/lib"
-# export CPPFLAGS="-I$(brew --prefix openssl@3.5)/include"
-# export PKG_CONFIG_PATH="$(brew --prefix openssl@3.5)/lib/pkgconfig"
-# export CMAKE_PREFIX_PATH="$(brew --prefix openssl@3.5)"
-
 # postgresql
 export PATH="$(brew --prefix postgresql@15)/bin:$PATH"
 
